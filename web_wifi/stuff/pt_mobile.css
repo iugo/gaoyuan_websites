@@ -1,0 +1,188 @@
+body, img, ul, li, p, ol, a{
+    font-family: "Droid Sans","Droid Sans Fallback"!important;
+}
+#pagewrap{
+    position: relative;
+    width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 12px;
+}
+#content{
+    position: relative;
+}
+html{
+    -webkit-text-size-adjust: none;
+}
+/*top id*/
+.flexslider{
+    height: 260px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    width: auto\9;/*ie8*/
+}
+.company,.ms,.cp-info{
+    padding: 0 15px;
+    background: #F7F7F7;
+}
+.company{
+    min-height: 100px;
+    overflow: hidden;
+}
+.company p{
+    margin-left: 120px;
+    margin-top: 28px;
+}
+.company-logo{
+    position: absolute;
+    top: -20px;
+    float: left;
+}
+.login .wx-name{
+    font-size: 1em;
+    text-align: center;
+    display: block;
+    white-space:nowrap;
+    overflow: hidden;
+}
+#content .ms{
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #DAE1E6;
+}
+.ms p,.cp-info p{
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+.login{
+    padding: 10px 40px;
+}
+.login p{
+    text-align: center;
+    font-size: 1.2em;
+}
+.button{
+    position: relative;
+}
+.button a{
+    margin: 10px auto!important;
+    padding: 15px 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+.success{
+    margin-top: 20px;
+}
+/*弹窗黑色透明背景*/
+.holder-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    z-index: 998;
+    width: 100%;
+    height: 128%;
+    background-color: #333;
+    display: none;
+}
+/*弹窗*/
+#holder-wrap .holder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0 30px 0;
+    text-align: center;
+    background-color: #FAFAFA;
+    z-index: 999;
+    display: none;
+}
+.holder{
+    text-align: center;
+}
+/*通过单独的class控制整个holder显示或者隐藏*/
+.holder-title{
+    overflow: hidden;
+}
+.content-phone,.holder-title{
+    padding: 0 20px;
+}
+.holder>.holder-title>p{
+    float: left;
+    color: #27A286;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.title-weixn>span{
+    color: #888;
+    font-size: 0.6em;
+}
+.content-weixin{
+    margin-top: 10px;
+    text-align: left;
+}
+.weixin-step{
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+.holder-title>.close{
+    float: right;
+}
+.content-weixin>p{
+    text-align: left;
+    color: #333;
+    font-size: 1.2em;
+    line-height: 2em;
+}
+.apple-link{
+    padding: 8px 20px;
+    color: #fff;
+    font-size: 1.2em;
+    background: #2FB595;
+    border-radius: 4px;
+    display: none;
+}
+.input-box{
+    position: relative;
+    margin-top: 40px;
+}
+.input-box input{
+    width: 96%;
+    padding: 20px 10px;
+    color:#333;
+    font-size: 1.8em;
+    outline: none;
+    border: 1px solid #A1CCC2;
+}
+.inpt:focus{
+    border: 1px solid #2EB294;
+}
+.holder .login-button{
+    display: block;
+    margin-top: 40px;
+    padding: 20px;
+    color: #fdfdfd;
+    font-size: 2em;
+    background-color: #34C9A6;
+    border-radius: 5px;
+}
+.login-button:hover{
+    background-color: #2BA689;
+}
+.close:hover,.close:focus{
+    background-position: 0 -29px;
+}
+.qqshare a{
+    padding-left: 9px;
+    width: 57px;
+    height: 21px;
+    line-height: 21px;
+    color: #fff;
+    background: url(http://qzonestyle.gtimg.cn/qzone_v6/proj_connect_open/img/open/like_bg_zan.png?max_age=19830211&d=1125175141) no-repeat;
+    display: block;
+    text-decoration: none;
+    background-position:-70px -249px;
+}

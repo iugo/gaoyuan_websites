@@ -1,0 +1,104 @@
+/*超过560px*/
+@media screen and (min-width: 560px){
+    #pagewrap{
+        width: 560px!important;
+    }
+    .iphone-weixin{
+        width: 560px!important;
+        margin: 0 auto;
+    }
+}
+/*小于480px*/
+@media screen and (max-width: 480px){
+    #pagewrap{
+        width: 100%!important;
+    }
+    .iphone-weixin{
+        width: 100%!important;
+        margin: 0 auto;
+    }
+    .wx-name .wx-cont{
+        font-size: 1em;
+    }
+    .wx-name .wx-bg{
+        top: -40%;
+    }
+    #pagewrap .flexslider{
+        height: 180px;
+    }
+    #pagewrap .company{
+        min-height: 60px;
+    }
+    .company .company-logo{
+        width: 80px!important;
+        height: auto;
+    }
+    #content .company p{
+        margin-top: 15px;
+        margin-left: 90px;
+        font-size: 1.4em;
+    }
+    .holder>.holder-title>p{
+        font-size: 1.2em!important;
+    }
+    .title-weixn>span{
+        font-size: 0.55em!important;
+    }
+    .close{
+        width: 23px!important;
+        height: 23px!important;
+        background-size: 22px!important;
+    }
+    .close:hover,.close:focus{
+        background-position: 0 -22px!important;
+    }
+    .holder .login-button,.input-box input{
+        font-size: 1.6em!important;
+        padding: 12px!important;
+    }
+    .input-box input{
+        width: 94%!important;
+        font-size: 1.4em!important;
+    }
+}
+/*小于320px*/
+@media screen and (max-width: 320px){
+    .flexslider{
+        height: 160px!important;
+    }
+    .company-logo{
+        top: -25px!important;
+    }
+    .company p{
+        font-size: 1.3em!important;
+    }
+    .ms p{
+        font-size: 1.1em!important;
+    }
+    #content .ms{
+        padding-top: 10px!important;
+        padding-bottom: 10px!important;
+    }
+    .success>p{
+        font-size: 1.2em!important;
+    }
+    .holder>.holder-title>p{
+        font-size: 1.0em!important;
+    }
+    .close{
+        width: 20px!important;
+        height: 20px!important;
+        background-size: 20px!important;
+    }
+    .close:hover,.close:focus{
+        background-position: 0 -22px!important;
+    }
+    .holder .login-button,.input-box input{
+        font-size: 1.4em!important;
+        padding: 12px!important;
+    }
+    .input-box input{
+        width: 92%!important;
+        font-size: 1.2em!important;
+    }
+}

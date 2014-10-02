@@ -1,0 +1,130 @@
+body,img,ul,li,p,ol,a{
+    margin: 0;
+    padding: 0;
+    font:normal 12px Arial,Helvetica,STHeiti,tahoma;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+a,.button a{
+    text-decoration: none;
+}
+ol,li{
+    list-style: none;
+}
+.company-logo{
+    width: 110px;
+    height: 110px;
+    border-radius: 80px;
+}
+.button a{
+    margin: 20px auto;
+    color: #fdfdfd;
+    border-radius: 5px;
+    display: block;
+}
+.weibo{
+    background-color: #E65042;
+}
+.weibo:hover{
+    background-color: #E63525;
+}
+.qq{
+    background-color: #3A92E2;
+}
+.qq:hover{
+    background-color: #1780E3;
+}
+.phone{
+    background-color: #FEA726;
+}
+.phone:hover{
+    background-color: #FA9A0A;
+}
+.weixin{
+    background-color: #2ACB72;
+}
+.weixin:hover{
+    background-color: #11C261;
+}
+/*登录成功提示语*/
+.success{
+    text-align: center;
+    overflow: hidden;
+}
+.success>p{
+    padding: 12px 0;
+    color: #27B674;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-align: center;
+}
+.success>p>span{
+    margin-right: 15px;
+    padding: 10px 0 10px 10px!important;
+    color: #fdfdfd;
+    font-size: 1em;
+    word-spacing: 0!important;
+    background-color: #27B674;
+    border-radius: 80px;
+}
+.s-share{
+    width: 270px;
+    margin: 10px auto 0 auto;
+    padding: 0 10px 0 50px;
+    text-align: center;
+    overflow: hidden;
+}
+.success .qqshare{
+    height: 23px;
+    vertical-align: top;
+    display: inline-block;
+}
+.qqshare iframe{
+    width: 90px!important;
+}
+.success .sinashare{
+    height: 23px;
+    display: inline-block;
+}
+.icon {
+    font-family: 'success';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-checkmark:before {
+    content: "\e600";
+}
+/*上网按钮*/
+.login-button .btn-login:hover{
+    background-color: #2BA689;
+}
+.slides{
+    position: relative;
+}
+.slides li{
+    width: 100%;
+    max-height: 260px;
+    min-height: 260px;
+    overflow: hidden;
+}
+/*.slides img{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}*/
+.company p{
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 2em;
+    font-weight: 900;
+}
+.ms>p{
+    color: #666;
+}
