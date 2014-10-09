@@ -1,0 +1,28 @@
+// JavaScript Document
+document.writeln("<footer style=\"visibility: visible;\" class=\"wow fadeIn animated\">");
+document.writeln("		<div class=\"ft-ct\">");
+document.writeln("			<div class=\"ct-link\">");
+document.writeln("				<div class=\"code\">");
+document.writeln("					<img src=\"images/zhangshangqiankun.jpg\" width=\"110\" alt=\"关注官方微信：掌上乾坤\" title=\"二维码扫描关注官方微信\" height=\"110\">");
+document.writeln("					<div class=\"ct-right\">");
+document.writeln("						<div class=\"wlink\">");
+document.writeln("							<a class=\"lk-ico qqico\" href=\"http://wpa.qq.com/msgrd?v=3&amp;uin=3054065517&amp;site=qq&amp;menu=yes\" title=\"官方QQ\">QQ</a>");
+document.writeln("							<a class=\"lk-ico weibo\" href=\"http://weibo.com/u/3683656424\" target=\"_blank\" title=\"官方新浪微博\">微博</a>");
+document.writeln("							<a class=\"lk-ico wangwang\" href=\"http://www.taobao.com/webww/ww.php?spm=a1z10.1.w5003-6305062256.2.1frE6f&amp;ver=3&amp;touid=rippletek&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8&amp;scene=taobao_shop\" target=\"_blank\" title=\"淘宝旺旺\">旺旺</a>");
+document.writeln("						</div>");
+document.writeln("						<p><span class=\"tico weixin\"></span>官方微信公众号：掌上乾坤</p>");
+document.writeln("						<p><span class=\"tico qq\"></span>官方QQ群：46346630</p>");
+document.writeln("						<p><span class=\"tico tel\"></span>联系方式：0356-8880048</p>");
+document.writeln("					</div>");
+document.writeln("				</div>");
+document.writeln("			</div>");
+document.writeln("			<div class=\"lk1\">");
+document.writeln("				<div class=\"p-style\">");
+document.writeln("					<em>移动互联网解决方案开发商!</em>");
+document.writeln("				</div>");
+document.writeln("				<p>晋城掌上乾坤网络科技有限公司(Jincheng Palm Universe Network Tech Co.Ltd.)</p>");
+document.writeln("				<p>Copyright © 2014 Palm Universe All Rights Reserved. 晋ICP备14005487号</p>");
+document.writeln("				<p>友情链接: <a href=\"http://gy.go0356.com/\" target=\"_blank\" title=\"高远随行 APP\">高远随行</a></p>");
+document.writeln("			</div>");
+document.writeln("	</div>");
+document.writeln("</footer>");
