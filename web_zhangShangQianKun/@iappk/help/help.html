@@ -1,0 +1,5452 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>帮助中心,App,App开发,App制作,App推广,免费App,App代理,爱传APP+</title>
+<meta name="keywords" content="帮助中心,App,App开发,App制作,App推广,免费App,App代理,爱传APP+" />
+<meta name="description" content="爱传APP+是全国领先的App制作推广自助平台，是一个提供免费App制作、App推广、App内容管理的一站式服务平台。我们面对全国招收APP渠道代理。我们是原生App定制开发，微信开发，支付宝服务窗开发，HTML5开发、IOS开发、安卓开发、WebApp开发的优先选择。" />
+<link href="../newCss/main.css" type="text/css" rel="stylesheet" />
+<link href="../newCss/styles.css" type="text/css" rel="stylesheet" />
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="../newjs/jquery.js"></script> 
+<script type="text/javascript" src="../newjs/share.js"></script>
+<script type="text/javascript" src="../newjs/content.js"></script>
+<!--[if lt IE 9]>
+<script src="../newjs/slide/html5shiv.js"></script>
+<![endif]-->
+<!--[if lt IE 10]>
+<script type="text/javascript" src="../newjs/radius.js"></script>
+<![endif]-->
+<script type="text/javascript">
+var url = "http://www.iappk.com/";
+var ajaxUrl = "http://crm.iappk.com/";
+var v_cjwt = 1;
+var v_czsc = 1;
+var v_spjc = 1;
+
+//注册传参
+var v_oauthUrl = "http://cms.iappk.com/oauth/";
+function f_register(){
+	window.location.href = v_oauthUrl + 'register.do?appKey=baa3dded-0b30-4ae7-99cf-1b7ff86f6eb8&callbackURL='
+				+ encodeURIComponent(ajaxUrl+'userCenter.do') + "&loginURL="
+				+ encodeURIComponent(ajaxUrl+'userCenterLogin.do');
+}
+
+function f_pre(prefix){
+	if(prefix == 'cjwt'){
+		if(v_cjwt > 1){
+			$("#cjwt_"+v_cjwt).css("display","none");
+			$("#cjwt_"+(v_cjwt-1)).css("display","block");
+			v_cjwt = v_cjwt-1;
+		}
+	}
+	if(prefix == 'czsc'){
+		if(v_czsc > 1){
+			$("#czsc_"+v_czsc).css("display","none");
+			$("#czsc_"+(v_czsc-1)).css("display","block");
+			v_czsc = v_czsc-1;
+		}
+	}
+	if(prefix == 'spjc'){
+		if(v_spjc > 1){
+			$("#spjc_"+v_spjc).css("display","none");
+			$("#spjc_"+(v_spjc-1)).css("display","block");
+			v_spjc = v_spjc-1;
+		}
+	}
+}
+
+function f_next(prefix){
+	if(prefix == 'cjwt'){
+		if($("#cjwt_"+(v_cjwt+1)).html() != null){
+			$("#cjwt_"+v_cjwt).css("display","none");
+			$("#cjwt_"+(v_cjwt+1)).css("display","block");
+			v_cjwt = v_cjwt+1;
+		}
+	}
+	if(prefix == 'czsc'){
+		if($("#czsc_"+(v_czsc+1)).html() != null){
+			$("#czsc_"+v_czsc).css("display","none");
+			$("#czsc_"+(v_czsc+1)).css("display","block");
+			v_czsc = v_czsc+1;
+		}
+	}
+	if(prefix == 'spjc'){
+		if($("#spjc_"+(v_spjc+1)).html() != null){
+			$("#spjc_"+v_spjc).css("display","none");
+			$("#spjc_"+(v_spjc+1)).css("display","block");
+			v_spjc = v_spjc+1;
+		}
+	}
+}
+
+//获取QueryString的数组
+function getQueryString(){
+     var result = location.search.match(new RegExp("[\?\&][^\?\&]+=[^\?\&]+","g")); 
+     if(result == null){
+         return "";
+     }
+     for(var i = 0; i < result.length; i++){
+         result[i] = result[i].substring(1);
+     }
+     return result;
+}
+
+//根据QueryString参数名称获取值
+function getQueryStringByName(name){
+     var result = location.search.match(new RegExp("[\?\&]" + name+ "=([^\&]+)","i"));
+     if(result == null || result.length < 1){
+         return "";
+     }
+     return result[1];
+}
+
+//根据QueryString参数索引获取值
+function getQueryStringByIndex(index){
+     if(index == null){
+         return "";
+     }
+     var queryStringList = getQueryString();
+     if (index >= queryStringList.length){
+         return "";
+     }
+     var result = queryStringList[index];
+     var startIndex = result.indexOf("=") + 1;
+     result = result.substring(startIndex);
+     return result;
+}
+
+$(function(){
+	var type = getQueryStringByName("type");
+	switch(parseInt(type)){
+		case 2:
+			$("#spjc").click();
+			break;
+		case 3:
+			$("#czsc").click();
+			break;
+		default:
+			break;
+	}
+});
+
+</script>
+</head>
+<body>
+<div class="head_bg clearfix">
+	<div class="head_l service_header">
+    	<span class="clearfix">
+            <a href="../index.html"><img src="../images/head_logo.png" alt="爱传APP+"></a>
+            <a hidden="javascript:void(0);" title="app制作" onclick="location.href = 'http://crm.iappk.com/userCenterLogin.do';" class="button_01 mart15">开始制作APP</a>
+        </span>
+    </div>
+	<div class="head_r">
+        <div class="login">
+        	<a href="http://www.iappk.com:80/help/javascript:void(0);" title="登录" onclick="location.href = 'http://crm.iappk.com/userCenterLogin.do';" class="button_02">登录</a>
+        	<a href="http://www.iappk.com:80/help/javascript:void(0);" title="注册" onclick="f_register();" class="button_02">注册</a>
+        </div>
+    	<div class="nav">
+        	<ul class="clearfix">
+            	<li><a href="../index.html" title="首页" class="on">首页</a></li>
+            	<li><a href="http://www.iappk.com:80/solve.html" title="解决方案"><b></b>解决方案</a></li>
+            	<li><a href="../apply.html" title="应用市场">应用市场</a></li>
+            	<li><a href="../service.html" title="服务市场"><b></b>服务市场</a></li>
+            	
+            	<li><a href="../news/news.html" title="新闻中心">新闻中心</a></li>
+            	<li><a href="../agent.html" title="代理渠道">代理渠道</a></li>
+            	
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="con_bg_02">
+	<div class="help_list">
+		<div class="help_list_title con_title">
+        	<ul class="clearfix">
+            	<li><a href="http://www.iappk.com:80/help/javascript:void(0)" class="on">常见问题</a></li>
+            	<li><a href="http://www.iappk.com:80/help/javascript:void(0)" id="spjc">视频教程</a></li>
+            	<li><a href="http://www.iappk.com:80/help/javascript:void(0)" id="czsc">操作手册</a></li>
+            </ul>
+            <b></b>
+        </div>
+		<div class="help_list_content con_content">
+        	<div class="help_list_con content" style="display:block;">
+        		        		        		        		<ul id="cjwt_1" class="help_list_pro">
+        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/f07dd5fe-d0d9-48c1-b7ae-21255819e484.html" title="申请无线支付宝流程" target="_blank">
+                            <h1>申请无线支付宝流程</h1>
+                            <h2>本流程适用商城版和商铺版客户支付使用。 
+
+
+	1. &nbsp; &nbsp; &nbsp;登录支付宝，选择产品大全中快捷支付（无线），如下图： 
+
+
+	 
+
+
+	
+
+
+	2. &nbsp; &nbsp;进入页面后，选择在线申请，如下图： 
+
+
+	
+
+
+	 
+
+
+	
+
+
+	3. &nbsp; &nbsp;申请成功后，返回首页，选择我的商家服务： 
+
+
+	
+
+
+	 
+
+
+	
+
+
+	4. &nbsp; &nbsp;点击查询PID、Key选项： 
+
+
+	
+
+
+	 
+
+
+	
+
+
+	5. &nbsp; &nbsp;选择安装数字证书： 
+
+
+	
+
+
+	 
+
+
+	
+
+
+	6. &nbsp; &nbsp;安装完毕，输入支付宝支付密码，如下图： 
+
+
+	
+
+
+	 
+
+
+	
+
+
+	7. &nbsp; &nbsp;RSA（公钥）由香传电商提供，填写前请先联系客服，获取RSA（公钥），获得后填写至如下图的框内，点击保存。 
+
+
+	
+
+
+	 
+
+
+	8． &nbsp; 等待技术人员整合调试，成功后通知。</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/bbb60397-88db-4838-b11b-4bbf88d27185.html" title="爱传app梦工厂--app注册、生成" target="_blank">
+                            <h1>爱传app梦工厂--app注册、生成</h1>
+                            <h2>一、爱传是什么 
+
+
+	爱传是一个不断深化价值，为企业提供高粘滞度，高使用率的掌上应用平台。爱传更是一个开放的平台，合作伙伴的企业不管专业于设计的，或者专业于营销的，或者专业管理的等等，都能在爱传这个平台上找到一席之地，共同创业，共创辉煌。
+
+
+	
+
+
+	二、爱传的设计理念 
+
+
+	爱传人用孩子般的热情和赤诚的心来进行爱传所有产品的设计，其中app的的设计理念是4A的设计理念，anybody，anywhere，anytime，anything，让任何人任何时间任何地点任何商业行为都成为可能，这既是设计的出发点，也是判断设计好坏的标准。
+
+
+	
+
+
+	三、爱传app的用户 
+
+
+	所有需要创建app的个人或企业。
+
+
+	
+
+
+	四、爱传app的制作流程 
+
+
+	爱传app的制作是傻瓜式的操作，创建很简单，一共三步。第一步：用户注册，第二步：应用生成，第三步：内容管理，以下就内容进行详细讲解：
+
+
+	（一）、用户注册 
+
+
+	1、登录官网 
+
+
+	打开网页浏览器，在地址栏输入官网www.iappk.com，打开爱传的首页，如图所示：
+
+
+	 
+
+
+	
+		2、注册用户 
+	
+	
+		（1）登录注册页面 
+	
+	
+		进入官网后，首页的右上角，有登录的按钮，或者在广告页面上，有免费创建app按钮，两个按钮点击进去都可以。
+	
+	
+		
+	
+	
+		 
+	
+	
+		
+			（2）轻松注册 
+		
+		
+			点击轻松注册即可注册，如图所示：
+		
+		
+			
+		
+		
+			 
+		
+		
+			点击之后，进入到新用户注册页面，根据提示进行填写即可，其中，电子邮箱最好能填写正确，因为会电子邮箱验证，方便以后忘记密码，能迅速找回密码，如图所示：
+		
+		
+			 
+		
+		
+			
+				拥有了帐号后，就可以直接登录了。使用用户名或者电子邮箱都能登录。
+			
+			
+				（二）、应用生成 
+			
+			
+				1、免费创建 
+			
+			
+				使用账号登陆就进入到用户中心，用户中心页面的左上角，有免费创建app的按钮，如图所示：
+			
+			
+				
+			
+			
+				 
+			
+			
+				点击它即可以进入创建的页面，如图所示：
+			
+			
+				 
+			
+			
+				
+					2、app生成 
+				
+				
+					进入到创建页面，只需要按照指示一步一步操作即可：
+				
+				
+					（1） &nbsp; &nbsp; &nbsp; app概况 
+				
+				
+					首先是应用名称，顾名思义就像人的名字一样，可用来让别人识别的，在此举一个案例进行操作演示，比如一家影院，名称是东方影城，应用名称这就输入东方影城。
+				
+				
+					应用行业，点击右边的下按钮，目前有四个行业选择，如果创建的应用是偏重信息展示，可使用门户类，如果创建的应用是偏重在线订单买卖的，可使用电子商务类，如果创建的应用是偏重服务在线咨询预订查看等，可使用服务类，像培训教育，婚庆影楼，美容美发。如果创建的应用是偏图片展示的，可使用兴趣模板，更多的行业应用，正在上线，敬请期待。在此选择大家比较关注的电子商务来进行操作演示。
+				
+				
+					应用说明，即本应用的功能，比如东方影城，是常州本地在线预订电影票。填写上自己应用的功能即可。
+				
+				
+					（2） &nbsp; &nbsp; &nbsp; app素材 
+				
+				
+					图标，就是我们安装到手机看到的标志，欢迎页就是我们安装点击图标后，进入的第一页面。如图所示：
+				
+				
+					
+				
+				
+					 
+				
+				
+					可以通过爱传自带的图片点击使用，也可以上传属于自己个性的图片来使用，如果是选择自己上传的话，根据指示提交即可。如图所示：
+				
+				
+					 
+				
+				
+					
+						（3） &nbsp; &nbsp; &nbsp; app模版 
+					
+					
+						在此做个重点提示，模板一旦选择，下次在更新升级时，不可更改。除了模板，其他内容都可以更改，比如样式，文字说明等等。每个行业，每个模板下面对应不用的样式，比如电子商务行业下蛋糕模板，下面就有四个样式，根据自己来选择，如图所示：
+					
+					
+						
+					
+					
+						 
+					
+					
+						
+							（4） &nbsp; &nbsp; &nbsp; app生成 
+						
+						
+							平台选择，可选择生成安卓系统或苹果系统，或者两者都选择。选择后点击生成应用即可。其中有个初始数据，初始数据是系统自带的数据，方便用户一生成应用之后能看到效果，需要不需要初始数据，可以将勾勾勾掉，如图所示：
+						
+						
+							
+						
+						
+							 
+						
+						
+							生成之后，点击查看应用，就进入到用户中心，看到刚刚生成的应用情况，如图所示：
+						
+						
+							 
+						
+						
+							
+								其中： 
+							
+							
+								更新升级，更新升级后会生成新的二维码，需慎重使用。除模板外，其他内容都可更新；
+							
+							
+								付费激活，应用只提供7天免费，7天后需缴费使用； 
+							
+							
+								删除应用：点击商处后，本应用将不存在；
+							
+							
+								短信推动：以短信方式让用户安装应用，本功能暂停；
+							
+							
+								App统计：可统计用户的登录时间，登录次数等。</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/f86b95bf-f0d0-4ea5-9d22-a07c5926406b.html" title="“新闻资讯内容管理”操作手册" target="_blank">
+                            <h1>“新闻资讯内容管理”操作手册</h1>
+                            <h2>爱传App梦工厂提供各行各业的app应用模板，本文提及的门户类新闻资讯模板，适合需较多信息发布的企业，商家等。以下就门户类新闻资讯模板的内容管理进行详细阐述：
+
+
+	一． 个性设置（模板别名） 
+
+
+	用户可以根据需求，先对模板的栏目进行个性设置，作出个性适合自己业务需要的app，如图所示：
+
+
+	
+
+
+	 
+
+
+	如：
+
+
+	 
+
+
+	
+
+
+	二．新闻 
+
+
+	新闻，可更改成企业需要的名称，偏重信息量比较大的资讯展示，我们以下说明我们以一家软件企业做操作说明，本软件企业将“新闻”改成了“首页”。
+
+
+	(一) &nbsp; 分类管理 
+
+
+	可根据企业本身的需要对企业的资讯进行分类，点击“分类管理”之后，跳出的页面，点击“添加一级分类”，至少添加一个分类，如图所示：
+
+
+	
+
+
+	 
+
+
+	添加需的分类，如：
+
+
+	 
+
+
+	添加后在手机端显示如图所示：
+
+
+	 
+
+
+	
+
+
+	(二) &nbsp;分类的内容添加 
+
+
+	点击“添加”，如图所示：
+
+
+	
+
+
+	 
+
+
+	根据跳出的页面添加相关内容即可，在手机端显示如下：
+
+
+	 
+
+
+	
+
+
+	三．图片 
+
+
+	图片栏目主要放置企业需要展示的图片，可更改成企业需要的名称，我们以下说明我们以一家软件企业做操作说明，本软件企业将“图片”改成了“功能”。
+
+
+	（一）分类管理 
+
+
+	至少添加一个分类，点击“添加分类”后出现的页面上，点击“添加一级分类”即可，如图所示：
+
+
+	
+
+
+	 
+
+
+	
+
+
+	（二）内容添加 
+
+
+	点击“添加”，如图所示：
+
+
+	
+
+
+	 
+
+
+	根据跳出的页面添加相关内容即可，在手机端的显示如下：
+
+
+	 
+
+
+	
+
+
+	四.简讯 
+
+
+	简讯栏目主要放置企业需发布的一些简短信息，建议在60个字以内，可更改成企业需要的名称，我们以下说明我们以一家软件企业做操作说明，本软件企业将“简讯”改成了“公告”。
+
+
+	（一）分类管理 
+
+
+	至少添加一个分类，点击“添加分类”，在跳出的页面上，点击“添加一级分类”即可，如图所示：
+
+
+	
+
+
+	 
+
+
+	根据跳出的页面添加相关内容即可，在手机端的显示如下：
+
+
+	 
+
+
+	
+		五.焦点图 
+	
+	
+		（一） 添加 
+	
+	
+		点击“添加”，内容类型，是焦点图能连接到的栏目，如图所示：
+	
+	
+		
+	
+	
+		 
+	
+	
+		在手机端显示如下：
+	
+	
+		 
+	
+	
+		
+			六．参数设置 
+		
+		
+			对用户查看app的内容权限进行设置，也可以不设置这些参数，方便用户使用，具体参数功能如下：
+		
+		
+			要求用户登录：每次打开应用，用户要登录后才能看到应用的内容
+		
+		
+			允许客户注册：有用户注册按钮
+		
+		
+			注册需要审核：用户注册后需要审核通过，通过后用户才能打开应用查看详情
+		
+		
+			
+		
+		
+			 
+		
+		
+			若三个条件都有设置，则在“用户管理”中，要对用户的注册进行启用或者禁用的选择，禁用时，用户就对应用登录不了，如图所示：
+		
+		
+			 
+		
+		
+			手机端如图所示：
+		
+		
+			 
+		
+		
+			
+				七．用户管理 
+			
+			
+				可查看用户的昵称，可对用户的密码进行重新设置。
+			
+			
+				
+			
+			
+				 
+			
+			
+				
+					
+				
+				
+					八．关于我们 
+				
+				
+					添加企业的介绍，其中添加正确的地址，并配上地图，可以对企业的用户进行导航，添加的电话，可让用户进行一键拨号。</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/a357df03-06de-4457-908a-f8f8681edc23.html" title="“产品展示”--“模块别名、参数设置、用户管理“等" target="_blank">
+                            <h1>“产品展示”--“模块别名、参数设置、用户管理“等</h1>
+                            <h2>（四) 模块别名 
+
+
+	用户可以根据需求，先对模板的栏目进行个性设置，作出个性适合自己业务需要的app，如我将搜索的板块别名改成了精品，如图所示：
+
+
+	 
+
+
+	手机客户端如图所示：
+
+
+	 
+
+
+	
+		(五) &nbsp;参数设置 
+	
+	
+		对用户查看app的内容权限进行设置，也可以不设置这些参数，方便用户使用，具体参数功能如下：
+	
+	
+		要求用户登录：每次打开应用，用户要登录后才能看到应用的内容
+	
+	
+		允许客户注册：有用户注册按钮
+	
+	
+		注册需要审核：用户注册后需要审核通过，通过后用户才能打开应用查看详情
+	
+	
+		
+	
+	
+		 
+	
+	
+		若三个条件都有设置，则在“用户管理”中，要对用户的注册进行启用或者禁用的选择，禁用时，用户就对应用登录不了，如图所示：
+	
+	
+		 
+	
+	
+		手机客户端如图所示：
+	
+	
+		 
+	
+	
+		
+			（六) &nbsp;用户管理 
+		
+		
+			可查看用户的昵称，可对用户的密码进行重新设置
+		
+		
+			
+		
+		
+			 
+		
+		
+			
+				(七) &nbsp;门店管理 
+			
+			
+				客户可以添加相应产品销售的门店信息，点击门店管理的添加，即可对门店的信息进行详细描述如图所示：
+			
+			
+				 
+			
+			
+				
+			
+			
+				
+					注意：图片的尺寸：320*240 &nbsp;以及图片格式，用红框标出。
+				
+				
+					如我对门店信息进行了如下添加，如图所示： 
+				
+				
+					
+				
+				
+					 
+				
+				
+					手机客户端如图所示：
+					
+						 
+					
+					
+						
+					
+					
+						
+							(八) &nbsp;关于我们 
+						
+						
+							客户可以根据需求，留下详细的信息，便于用户联系，以我为例对内容进行的编辑，如图所示：
+						
+						
+							
+						
+						
+							 
+						
+						
+							手机客户端如图所示：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/1d9b4061-a415-4cf8-a6f6-1c7fba7e2b69.html" title="“产品展示”--“产品、新闻、焦点图”" target="_blank">
+                            <h1>“产品展示”--“产品、新闻、焦点图”</h1>
+                            <h2>爱传APP工厂提供各行各业的app模板，本文提及的产品展示模板，适合需求形象展示较多的各企业，商家等。以下就产品展示模版的内容管理进行详细阐述： 
+
+
+	
+
+
+	(一) &nbsp;产品 
+
+
+	1.分类管理 
+
+
+	点击产品的“分类管理”，产品栏目下的分类至少一级，可以大于等于一级，可根据业务特征和消费指引的需要，进行分级。如图所示，在红色部分添加即可。我们以佳能相机来举例，一级分类有佳能600D,佳能650D等
+
+
+	 
+
+
+	
+
+
+	若需添加二级分类，点击“添加子类别”处，如我想在佳能600D添加二级分类，在佳能600D点击“添加子类别处”，输入二级分类的名称600D性能，排序即可，如图所示：
+
+
+	 
+
+
+	手机客户端如图所示：&nbsp;
+
+
+	 
+
+
+	
+
+
+	2.内容添加 
+
+
+	如需对产品进行详细的解说和图片的分享，即可点击你产品栏目里的已经添加好的分类点击“添加”来详细说明，如我想多佳能600D进行详细说明，，如图所示：
+
+
+	 
+
+
+	
+
+
+	点击添加后，有内容标题、是否发布、是否推荐、可以上传产品的列表图片和详细图片，对产品信息的进行解说。如我以佳能600D为例，对产品进行详细的图文说明。如果对“推荐”打√，则在首页可以看到产品的一个列表。
+
+
+	 
+
+
+	
+
+
+	注意：用于产品详情页的内容列表图片展示，建议尺寸：300*300；内容详情图片：620*610，以及图片格式，用红色框标出。
+
+
+	手机客户端如图所示：
+
+
+	 
+
+
+	
+
+
+	对产品进行收藏之后，在手机客户端“我的”中可以看到自己收藏的产品信息。如图所示：
+
+
+	 
+
+
+	
+
+
+	(二) &nbsp;新闻 
+
+
+	1.分类管理 
+
+
+	“新闻”栏目中可添加产品最新信息，最新的产品介绍，点击“新闻”栏目管理下的分类管理，添加一级类别即可添加类别名称，添加的分类至少一级，可以大于等于一级。添加二级分类的方式和“产品”栏目添加方式相同，如图所示：
+
+
+	 
+
+
+	
+
+
+	
+
+
+	2.添加 
+
+
+	添加好后，点击“新闻”栏下添加的一级类别标题，再点击左上角黄色的“添加”，即可对添加的标题进行详细说明和内容的概要，在HTML内容下可以对产品进行详细说明，如图所示：
+
+
+	 
+
+
+	
+
+
+	手机客户端如图所示：
+
+
+	 
+
+
+	
+
+
+	（三）焦点图 
+
+
+	根据产品市场效应，你还可以设置焦点产品的展示，点击焦点图，对焦点产品进行添加：如图所示：
+
+
+	 
+
+
+	
+
+
+	点击添加后，就可以输入你要添加的焦点图的内容类型，和相应的图片，如我添加了佳能600D、佳能650D的焦点图，如图所示：
+
+
+	 
+
+
+	
+
+
+	注意：用于商品详情页的图片展示，建议尺寸：640*248，以及图片格式，用红色框标出。
+
+
+	手机客户端如图所示：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/2b6818cd-fd69-48ce-9037-4e004109702d.html" title="手机软件app知识学堂" target="_blank">
+                            <h1>手机软件app知识学堂</h1>
+                            <h2>随着移动互联网迅速的发展，千姿百态的app顺势而生，从而改变着人们的生活习惯、工作习惯。如今，开发一款app应用已经不是一个难事，但是如何让更好地推广app应用是个困扰很多开发商的问题。
+
+
+	APP是英文Application的简称，主要是指智能手机的第三方应用程序。由于iPhone等智能手机的普及，手机客户端程序在智能手机上很快得到流行。App store即application store，通常理解为应用商店。它是一个由苹果公司为iPhone和iPod Touch、iPad以及Mac创建的服务，允许用户从iTunes Store或mac app store浏览和下载一些为了iPhone SDK或mac开发的应用程序。
+
+
+	手机软件app的发展背景：
+
+
+	&nbsp; &nbsp;2008年3月6日，苹果对外发布了针对iPhone的应用开发包（SDK），供免费下载，以便第三方移动应用开发人员开发针对iPhone及Touch的软件。不到一周时间，3月12日，苹果宣布已获得超过100，000次的下载，2013年1月8日苹果宣布，苹果官方商店APPStore的应用下载量已经突破400亿次，其中半数是2012年完成的；总活跃帐户数也达5亿。聆科app公司指出，一开始的时候移动APP定制软件只是单纯的作为一种第三方应用的合作形式参与到互联网商业活动中去的，随着互联网越来越开放化，智能手机的普及化，它作为一种萌生与iphone的盈利模式开始被更多的互联网商业大亨看重，如腾讯的微博开发平台，百度的百度应用平台都是它思想的具体表现，一方面可以积聚各种不同类型的网络受众，另一方面借助手机APP开发平台获取流量，其中包括大众流量和定向流量。
+
+
+	手机应用软件开发分类：
+
+
+	按照开发的系统来分，目前app开发市场上可分为三大类：
+
+
+	IOS开发（苹果app开发）
+
+
+	android开发（安卓手机app开发）
+
+
+	html5 web开发。
+
+
+	开发app需要多少钱?
+
+
+	“app开发费用”越来越成为了开发需求者最关注的焦点。现在很多顾客在开发移动手机应用软件之前，首先会问到关于手机APP定制开发价格之类的问题了。从这点看来就知道，现在很多顾客对手机客户端app软件定制开发这个行业不了解。关于定制一款企业手机app软件制作的费用问题，广州聆科网络app公司指出：“首先是要看顾客所开发的手机APP客户端制作是所属那种类型的，其次就是顾客的应用软件需求功能是什么，这样app开发商才能根据用户需求手机客户端软件实现的难易程度来给顾客具体的报价。”
+
+
+	常用的app移动客户端开发工具：
+
+
+	随着信息科技时代的发展，应用软件开发技术的不断创新，智能手机及手机app软件开发的普及，市场上涌现出诸多个人app开发者和企业app开发公司。下面是广州聆科网络app公司为开发者推荐的几款比较常用的app开发工具。
+
+
+	Bizness Apps：
+
+
+	这款软件为中小企业提供了一个快速制作手机App软件开发的平台。它目前支持iOS（iPhone、 iPad）及Android平台上的本机移动App制作软件。
+
+
+	DevmyApp：
+
+
+	这是一款傻瓜式的iOS客户端开发软件。有了该软件，您就可以创建、设计和开发自己的iOS应用程序了，同时还可避免为一些经常出现的功能模块重复编写代码， 这款程序比较适合苹果手机客户端软件的制作开发。
+
+
+	Appsgeyser：
+
+
+	使用AppsGeyser就可以让任何人都可以做应用程序的开发。 当然，这个程序并不能让你创建下一个愤怒的小鸟或者Foursquare。
+
+
+	APPMakr：
+
+
+	它的主要业务是为用户提供一个良好的app手机客户端软件开发平台，让不会编程的用户也可以通过一个功能齐全的DIY工具包来开发手机app。目前，AppMakr平台上的大部分应用主要是针对iOS系统，但针对Android及WP7的应用现在也正不断增长中。
+
+
+	Mobile Roadie：
+
+
+	Mobile Roadie提供一个应用开发平台，整合YouTube, Brightcove, Flickr, Twitpic, Ustream, Topspin, Google资讯，RSS, Twitter和Facebook。用户可使用该应用平台开发iOS和Android的应用，并可以使用其提供的内容管理系统更新资讯，也可自行修改应用细节。Mobile Roadie还提供了数据分析工具。
+
+
+	苹果IOS系统和谷歌安卓系统在APP界面设计上的区别
+
+
+	目前，在国内手机app界面设计软件行业内有两种主流的界面设计软件系统：一个是安卓app界面设计，另一个是苹果app界面设计。两者设计出来的界面风格各异，各具特色。android app界面在色调和饱和度上更多是偏向于实质感，而ios app 界面风格更多于透明、清晰，让人感到整体很纤薄而透明。</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/926302cf-979b-4550-95c0-c9f47d58b1c2.html" title="什么是移动应用？" target="_blank">
+                            <h1>什么是移动应用？</h1>
+                            <h2>广义上讲，只要是运行在移动终端上的应用程序，我们都可以称之为移动应用，这里主要讲的是手机和平板电脑上的移动应用。爱传是常州香传电子商务独立研发的移动应用服务产品，让用户可在手机上立即获得企业相关业务的关键信息，并可以通过触摸屏幕的方式联系到您。</h2>
+                        </a>
+                    </li>
+        		        		</ul>
+        		        		        		        		        		        		<ul id="cjwt_2" class="help_list_pro" style="display: none;">
+        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/6b0438e2-3e8f-46f0-ac9d-7a2e29f271af.html" title="为什么需要移动应用？" target="_blank">
+                            <h1>为什么需要移动应用？</h1>
+                            <h2>中国手机网民用户已逾3亿，3G网络建设亦趋完善，客户已经准备好在移动设备上找您了，如果您的企业还没有做好相关准备，客户将不能轻松的找到您的企业，这是个巨大的机会，您和您的企业绝对不想错过。</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/a58ff5e6-0f2c-41bb-ba00-bf7fc8c47482.html" title="移动应用对我们有什么作用？" target="_blank">
+                            <h1>移动应用对我们有什么作用？</h1>
+                            <h2>随着移动互联网时代来临，传统的被动式“开门等客”和粗放式“折扣营销”模式已不能支撑企业持续收益和良性发展的需要，适应市场需求的营销方案作用凸显， “移动营销”被视为下一代的营销金矿、商家制胜的法宝。移动应用是实现移动营销、精准营销的最好途径，能为企业提供行之有效的营销方案，能将新品信息、促销优惠信息实时、精准地传递给有效客户群。</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/84a320ba-86f4-48de-8077-382f6b9e790c.html" title="如何让用户知道我们的移动应用？" target="_blank">
+                            <h1>如何让用户知道我们的移动应用？</h1>
+                            <h2>您可以将通过爱传生成的应用提交到各大应用商城，供所有人下载。您也可以在您的宣传单、媒体推广、网络推广时，应用二维码下载方式，把您的移动应用通过与二维码的结合，把二维码作为推广内容之一，让用户知道、方便下载。</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/7756ce6e-c8f2-413e-8cdb-8c861e51f8d5.html" title="用户为什么要安装我们的移动应用？" target="_blank">
+                            <h1>用户为什么要安装我们的移动应用？</h1>
+                            <h2>下载移动应用对于用户来说是简单、免费的，如果他们对商品感兴趣一般都会下载、了解更多的产品信息。当然，如果企业能为下载应用的用户提供更多的优惠，相信用户会更乐意去下载。</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/2d4cdbb4-a099-4713-9e15-902cc3f8e0cf.html" title="用户安装我们的移动应用会不会很麻烦？" target="_blank">
+                            <h1>用户安装我们的移动应用会不会很麻烦？</h1>
+                            <h2>通过二维码下载或者直接到应用商城去查找、下载对智能手机用户来说是很简单的事情，因为现在他们就是这样去操作的。</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/1c4b750f-ade5-4bee-9b8c-8e53c40dcbd4.html" title="可否经常更新移动应用，对于我来说是否有额外的费用？" target="_blank">
+                            <h1>可否经常更新移动应用，对于我来说是否有额外的费用？</h1>
+                            <h2>您可以在任何时候使用管理后台，更新您的移动应用内容，可以随意测试，以便达到最佳页面效果，帮助您拓展业务。通过管理后台，您还可以免费使用推送通知、统计报表等增值服务。</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/2f6422f9-8b10-421a-bf27-fb9e2c8393bb.html" title="你们的移动应用可以运行在哪些平台上？" target="_blank">
+                            <h1>你们的移动应用可以运行在哪些平台上？</h1>
+                            <h2>爱传平台采用的是一次开发全平台(IOS/Android)适配的创新技术，支持平台的多少决定于您的选择。</h2>
+                        </a>
+                    </li>
+        		        		</ul>
+        		        		        		        		        		        		<ul id="cjwt_3" class="help_list_pro" style="display: none;">
+        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/2eb34017-6263-4a61-914d-f66efc8da54a.html" title="我该如何搭建我的移动应用？" target="_blank">
+                            <h1>我该如何搭建我的移动应用？</h1>
+                            <h2>您可以登陆爱传，登陆地址：www.iappk.com，成功注册后，在自助建站向导的指引下，通过简单5步操作[选择行业模板&gt;设置基本信息&gt;选择功能&gt;生成应用&gt;添加内容]，即可在几分钟内搭建出您专属的移动应用，真正实现“会打字就会开发应用”。如果您需要更多个性化的设计，可以选择我们的定制模式，我们有专人为您完成设计、建设、发布一站式服务；并可为您提供应用内容管理托管服务，为您更新、管理您的应用内容。</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/89d588ff-8609-4782-8d8a-008fcea218f9.html" title="移动应用与传统的互联网网站、Wap网站有什么区别？" target="_blank">
+                            <h1>移动应用与传统的互联网网站、Wap网站有什么区别？</h1>
+                            <h2>使用移动设备访问互联网网站时，常常会因为页面大小、载入速度等原因而无奈放弃访问。Wap网站是一般只适配小屏幕的移动设备。移动应用可直接植入不同平台的移动设备（如:iPhone/Android等），也可不植入而直接访问。通过移动应用能更直接地获取企业信息，更容易通过手机进行浏览，通过通话、短信等多种互动模式，获取最佳的用户体验。</h2>
+                        </a>
+                    </li>
+        		        						</ul>
+				        		        		<div class="clearfix">
+                	<a href="http://www.iappk.com:80/help/javascript:void(0)" class="arrow_l" onclick="f_pre('cjwt');"></a>
+                	<a href="http://www.iappk.com:80/help/javascript:void(0)" class="arrow_r" onclick="f_next('cjwt');"></a>
+             	</div>
+			</div>
+			<div class="help_list_con content">
+														<div class="clearfix">
+                	<a href="http://www.iappk.com:80/help/javascript:void(0)" class="arrow_l" onclick="f_pre('spjc');"></a>
+                	<a href="http://www.iappk.com:80/help/javascript:void(0)" class="arrow_r" onclick="f_next('spjc');"></a>
+                </div>
+			</div>
+			<div class="help_list_con content">
+            	        		        		        		<ul id="czsc_1" class="help_list_ope">
+        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/bc4bc334-3d4e-4735-83ef-d48470d5132c.html" title="“汽车4S”-系统管理和常用功能" target="_blank">
+                            <h1>“汽车4S”-系统管理和常用功能</h1>
+                            <h2>五、系统管理 
+
+
+	（一）意见反馈 
+
+
+	1. 用户在手机客户端可以对商家进行意见反馈，后台可以查看并管理意见反馈内容，如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;手机客户端显示如下图：&nbsp; 
+
+
+	 
+
+
+	
+
+
+	（二）关于我们 
+
+
+	1、点击关于我们，可以录入商家的名称、LOGO、简介等，如下图： 
+
+
+	 
+
+
+	&nbsp;
+
+
+	
+
+
+	手机客户端显示如下图： 
+
+
+	
+
+ 
+
+	 
+
+
+	（三）应用引导页 
+
+
+	1.点击应用引导页，如下图： 
+
+
+	 
+
+
+	
+
+
+	2.选择启动引导页展示模式，如下图： 
+
+
+	 
+
+
+	
+
+
+	3.点击添加增添新的引导页，如下图： 
+
+
+	 
+
+
+	
+
+
+	手机客户端显示如下图： 
+
+ 
+
+	
+
+
+	 
+
+
+	（四）首页LOGO 
+
+
+	1.点击首页LOGO，上传LOGO图片，如下图： 
+
+
+	 
+
+ 
+
+	
+
+
+	（五）模块别名 
+
+
+	1、点击模块别名，如下图所示： 
+
+
+	 
+
+
+	2、在别名下面填写要修改的内容，按保存即可。 
+
+
+	 
+
+
+	手机客户端显示如下图： 
+
+
+	 
+
+
+	六、常用功能 
+
+
+	（一）快改
+
+
+	快改指可对当下页面上的内容直接更改，如图所示，当下页面的内容可直接更改：
+
+
+	 
+
+
+	（二）排序 
+
+
+	需对页面上栏目的顺序进行调整时，调整排序中的时间即可，时间越前的越往前排，如图所示：
+
+
+	 
+
+
+	
+
+
+	（三）消息推送 
+
+
+	可从“商品”中推送或者“活动”、“团购”、“秒杀”中推送，推送后的可链接关联的页面。
+
+
+	 
+
+
+	添加推送内容：
+
+
+	 
+
+
+	手机客户端显示如下图：
+
+ 
+
+	 
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+ 
+
+	
+
+
+	&nbsp;</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/03c781cd-8910-4281-98b6-f78bd0d32781.html" title="“汽车4S”-团购管理，预约管理" target="_blank">
+                            <h1>“汽车4S”-团购管理，预约管理</h1>
+                            <h2>三、团购管理 
+
+
+	（一）团购列表 
+
+
+	1、选择团购管理中的团购列表，如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	
+
+
+	2、如下图所示，在对应位置填写相关信息，按保存即可。 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	
+
+
+	手机客户端显示如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	
+
+
+	&nbsp;
+
+
+	（二）报名列表 
+
+
+	1.用户可以在客户端注册，选择在线团购，填写信息后，后台可以看到报名列表，如下图： 
+
+
+	&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	
+
+
+	&nbsp;
+
+
+	（三）地区列表 
+
+
+	1、选择地区列表，点击添加地区，如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	
+
+
+	2、在对应位置填写相关信息，按“保存”即可&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	 
+
+
+	四、预约管理 
+
+
+	（一）预约列表 
+
+
+	1. 用户在手机客户端预约后，后台选择预约管理，点击预约列表，可查看用户预约信息，如下图：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	
+
+
+	手机客户端显示如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;
+
+
+	（二）预约分类 
+
+
+	1.选择预约分类，选择添加分类，如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	 
+
+
+	手机客户端显示如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	
+&nbsp;
+
+
+	
+&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/f034cab0-8c72-4865-8b06-93c3c099c8bc.html" title="“汽车4S”-经销管理和新闻管理" target="_blank">
+                            <h1>“汽车4S”-经销管理和新闻管理</h1>
+                            <h2>爱传app梦工厂提供各行各业的app应用模板，本文提及的政企通，适合需求政府或者企业等。以下就汽车4S店的内容管理进行详细阐述： 
+
+
+	一、经销商管理 
+
+
+	&nbsp;（一）经销商列表 
+
+
+	1、 选择经销商列表，点击添加经销商， 在相应位置填写相关信息，可添加地图，可一键拨号，如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	手机客户端显示如下图：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	2、 经销商列表添加完整后，点击添加车型展示，即经销商展示的车型 ，如下图： 
+
+
+	 
+
+
+	3、&nbsp;选择车型展示，点击添加车型，显示如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	4、 如下图所示，在对应位置，填写相关信息，点击保存即可。 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+ 
+
+	&nbsp;
+
+
+	手机客户端显示如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	
+
+
+	二、新闻管理 
+
+
+	（一）新闻列表 
+
+
+	1、 选择新闻管理中的新闻列表，点击添加新闻，如下图：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;2、如下图所示，在对应位置填写相关信息之后，点击“保存”即可。 
+
+
+	&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	手机客户端显示如下图：&nbsp; 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+	（二）焦点图 
+
+
+	1、选择焦点图，点击添加按钮，如下图所示： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	2、如下图所示，在对应位置填写相关信息，点击“保存“即可。
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  
+
+
+	手机客户端显示如下图：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+ 
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/a85315ea-a3a4-4116-94d6-d7178bd7e33e.html" title="“政企通”-用户动态，基础信息等" target="_blank">
+                            <h1>“政企通”-用户动态，基础信息等</h1>
+                            <h2>三、用户动态 
+
+
+	（一）评论列表 
+
+
+	在此栏目可查看到所有评论，对评论可进行显示或不显示的选择，如果选择不显示，则用户看不到相应的评论： 
+
+
+	 
+
+
+	手机客户端显示如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	
+
+
+	
+
+
+	&nbsp;
+
+
+	（二）意见反馈 
+
+
+	用户的意见反馈内容在此可查阅，可删除： 
+
+
+	 
+
+
+	手机客户端显示如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	四、基础信息 
+
+
+	（一）分支机构 
+
+
+	选择基础信息中的分支机构，选择添加，如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+	手机客户端显示如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+	&nbsp;
+
+
+	（二）用户管理 
+
+
+	可查看用户的昵称，可对用户的密码进行重新设置
+ 
+
+
+	&nbsp;
+
+
+	（二）公告信息 
+
+
+	可添加公告信息，如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	手机客户端显示如下图 ： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+	&nbsp;
+
+
+	五、常用功能 
+
+
+	（一）快改 
+
+
+	快改指可对当下页面上的内容直接更改，如图所示，当下页面的内容可直接更改： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;
+
+
+	（二）推送 
+
+
+	可从文章管理中设置推送，推送后的可关联的页面为设置推送的内容，如下图所示： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+	手机客户端显示如下图： 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+	
+&nbsp;
+
+
+	
+&nbsp;
+
+
+	
+&nbsp;
+
+
+	
+&nbsp;</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/09b81e10-aa6b-4a76-805a-29a6102074e7.html" title="“政企通”-系统设置，素材管理" target="_blank">
+                            <h1>“政企通”-系统设置，素材管理</h1>
+                            <h2>爱传app梦工厂提供各行各业的app应用模板，本文提及的政企通，适合需求政府或者企业等。以下就政企通的内容管理进行详细阐述：
+
+
+	一、系统设置 
+
+
+	&nbsp;（一） &nbsp;关于我们 
+
+
+	单位的名称，LOGO，简介，联系人，电话，地址在此可以录入，其中电话可以一键拨号，地址可以进行导航，按照提示添加即可，如图所示：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	手机客户端显示如下图：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;
+
+
+	&nbsp;（二） &nbsp;四图轮播 
+
+
+	打开APP时，客户端轮播的图片，添加即可，如下图：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	手机客户端显示如下图：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	（三） 首页图标 
+
+
+	如图所示，标注区域为logo区域，可设置文字或logo，logo建议做成透明的才好看。
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;
+
+
+	（四） 别名管理 
+
+
+	首页显示主题的图标及名称，如下图：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;
+
+
+	 
+
+
+	手机客户端显示如下图：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;
+
+
+	二、素材管理 
+
+
+	&nbsp;（一） &nbsp;文章管理 
+
+
+	选择素材管理中的文章管理，点击添加，可选择文章分类，可上传图片封面，可上传视频文件，大小不超过100M，MP4格式，如下图：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	手机客户端显示如下图：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;
+
+
+	&nbsp;（二） &nbsp;下载中心 
+
+
+	可上传文件到APP，支持上传格式为*.pdf *.txt 最大为10M，如下图：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	手机客户端显示如下图：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	
+&nbsp;
+
+
+	
+&nbsp;
+
+
+	
+&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	
+&nbsp;
+
+
+	&nbsp;</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/925abc13-c744-4d4e-a5f6-af391a785b68.html" title="“通用门户”-内容管理，门店商户，会员系统等" target="_blank">
+                            <h1>“通用门户”-内容管理，门店商户，会员系统等</h1>
+                            <h2>三、内容管理 
+
+
+	（一）信息展示类 
+
+
+	1、分类管理
+
+
+	点击分类管理，添加需要的分类即可：
+
+
+	 
+
+
+	其中，分类的展现形式，会决定分类的呈现：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	2、内容添加填写产品或服务的信息标题，分类和内容，其中信息图集和视频链接（如何上传视频，请查阅《爱传门户通用模板视频链接办法》）功能可供选择：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;
+
+
+	
+
+
+	在内容项中，各按键的功能如下：
+
+
+	红色标识：为全屏显示按键
+
+
+	黄色标识：上传图片按键
+
+
+	蓝色标识：内容页安插链接按键
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	3、焦点图管理
+
+
+	如果不添加焦点图，则默认无焦点图，直接显示内容：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	如果添加焦点图，可选择添加的位置，首页或者分类页都可以：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	在手机端显示如下：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （在首页）
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （在分类页）
+
+
+	（二）单页面信息展示类 
+
+
+	1，内容添加（同信息展示“内容添加”）
+
+
+	（三）项目预约类 
+
+
+	用户选择单个或多个项目进行预约,如“试驾预约”,“包厢预约”,“家庭清洁”等，在后台添加可预约的项目，在手机终端上同步更新：
+
+
+	 
+
+
+	在手机端显示如下：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	用户预约时，后台能自动获得预约人的地址定位信息：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	用户预约后，在用户中心可查看到预约状态，如果商家设置了预约审核功能，用户预约后看到的状态是“待审核”，待商家审核后，状态会变更为“成功”，如果商家未设置预约审核功能，用户预约后看的状态是“成功”：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（四）门店商户类 
+
+
+	此处门店商户，指可以独立运营的个体。可以是集团的分公司、分厂，也可以是公司的各不同品牌，也可以是连锁店，等等：
+
+
+	1、 &nbsp;分类管理
+
+
+	点击“分类管理”按钮，添加需要的分类：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	在手机端显示如下：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	2、&nbsp;&nbsp;添加门店商户
+
+
+	添加可独立运营的个体的详细内容：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	在手机端显示如下：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	3、&nbsp;&nbsp;距离筛选管理
+
+
+	添加可供用户选择的距离：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	在手机端显示如下：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（五）友情链接类 
+
+
+	点击“添加链接”的按键，输入链接的网址即可：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	在手机端显示如下：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;
+
+
+	四、会员系统 
+
+
+	（一）会员列表 
+
+
+	可添加会员，点击“添加会员按钮”，填充好内容保存即可：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	可修改和查看会员的相关信息：
+
+
+	 
+
+
+	（二）会员规则 
+
+
+	对用户查看app的内容权限进行设置，也可以不设置这些参数，方便用户使用，具体参数功能如下：
+
+
+	要求用户登录：每次打开应用，用户要登录后才能看到应用的内容
+
+
+	允许客户注册：有用户注册按钮
+
+
+	注册需要审核：用户注册后需要审核通过，通过后用户才能打开应用查看详情
+
+
+	（三）预约列表 
+
+
+	可查看和审核用户的预约情况：
+
+
+	 
+
+
+	在手机端如图所示：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（四）评论列表 
+
+
+	可查看或显示、隐藏信息：
+
+
+	 
+
+
+	在手机端显示如下：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（五）意见反馈 
+
+
+	可以查看或删除意见反馈的信息：
+
+
+	 
+
+
+	&nbsp;
+
+
+	五、应用信息 
+
+
+	（一）启动引导 
+
+
+	启动引导页是指进入系统后的引导页面，以图片展示。最多4张，最后一张会有进入应用的按钮。
+
+
+	启动模式可以有三种选择：
+
+
+	a. &nbsp; &nbsp; &nbsp; 不启用
+
+
+	b. &nbsp; &nbsp; &nbsp; 仅在初次安装或者每次更新后打开应用时显示（常用于应用介绍）
+
+
+	c. &nbsp; &nbsp; &nbsp; 每次打开应用都显示（常用于广告展示） 点击添加，上传图片建议的尺寸图片即可：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（二）首页logo 
+
+
+	首页LOGO会显示在首页顶部,系统默认选择应用的名称以文字的形式显示。上传LOGO,最好是透明的PNG格式的图片,可上传更换。
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（三）首页背景图 
+
+
+	可以上传多张背景图，用户手机端可以选择自己喜欢的背景下载，设置成首页背景，上限30张，点击“添加”，按照建议的尺寸上传：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（四）关于我们 
+
+
+	填写企业介绍的相关资料，按照提示添加即可：
+
+
+	 
+
+
+	（五）敏感词过滤 
+
+
+	可对网络上的敏感词进行过滤，如图所示：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	
+&nbsp;
+
+
+	
+&nbsp;
+
+
+	
+&nbsp;
+
+
+	
+&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	
+&nbsp;</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/28a9b9bd-2fb3-4acc-90ba-050da2c5141d.html" title=""通用门户"-常用功能，栏目管理" target="_blank">
+                            <h1>"通用门户"-常用功能，栏目管理</h1>
+                            <h2>门户通用模板适合暂时不需电子商务功能的企业或者本身是服务性质的企业，以灵活和丰富等优秀的特点被广大的用户所喜爱，以下就其操作进行相关说明：
+
+
+	一、常用功能 
+
+
+	（一）快改 
+
+
+	“快改”可对当下页面上的内容或功能直接更改，如图所示，红色部分即可更改，更改内容或功能后点击“快改”按键即可：
+
+
+	 
+
+
+	&nbsp;
+
+
+	（二）排序 
+
+
+	需对页面上栏目的顺序进行调整时，调整排序中的时间即可，排列方式是倒序的方式：
+
+
+	 
+
+
+	（三）第三方登录 
+
+
+	用户要注册成会员，在用户中心，用户可进行新的注册，也可进行第三方登录，如图所示：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	
+
+
+	（四）消息推送 
+
+
+	栏目推送：单页面信息展示的栏目可直接推送。
+
+
+	 
+
+
+	内容推送：除了使用“友情链接”和“项目预约”形式的栏目内容不可以推送，其他的形式栏目的内容都可以推送。 
+
+
+	点击推送后，如图所示，填写相关内容并“保存”即可发布到用户的手机上：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	
+
+
+	手机端显示如下：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	
+
+
+	二、栏目管理 
+
+
+	(一) 栏目管理 
+
+
+	1、 内容管理
+
+
+	详见“三.内容管理”操作说明
+
+
+	2、 自定义属性
+
+
+	可对产品或服务的属性进行自定义，如定义旅游的属性：价格、天数、线路……如定义服装的属性：价格、颜色、尺寸……如定义电脑的属性：价格、尺寸、颜色、增值服务等，各行各业都可以定义本行业的属性，点击“自定义属性”，填写相关属性：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	
+
+
+	填写属性后，在具体的内容页，填写内容时，会体现属性需要添加，如在栏目的自定义属性我加了“价格”，在页面页就会添加价格：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	
+
+
+	在手机端显示如下：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	
+
+
+	&nbsp;
+
+
+	(二) 添加栏目 
+
+
+	1、 栏目名称
+
+
+	可以自由定义自己栏目的名称，在后台命名后，在手机端同步跟新。如图所示：
+
+
+	 
+
+
+	2、栏目图标
+
+
+	用户从后台系统图库中选择图标，或者自己上传图片，按照提示操作即可：
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+	3、&nbsp;&nbsp;栏目底色
+
+
+	栏目的底色可以自由选择，在后台选择后，在手机终端同步更新，如图所示：
+
+
+	 
+
+
+	4、&nbsp;&nbsp;展现形式
+
+
+	可以自由选择栏目的展现形式，具体如下：
+
+
+	4.1信息展示
+
+
+	可以具象立体的展现信息,如新闻资讯,产品展示,特色如下：
+
+
+	（1）.有信息首页,有信息分类导航,有信息列表,多层次展现信息
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（2）.可以自由选择分类和列表的展现形式
+
+
+	分类的展现方式，目前提供两种
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;
+
+
+	
+
+
+	列表的展现方式，目前提供四种
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+	（3）.可以选择设置栏目内的基础功能,如“分享,收藏,评论,预约,字号大小”
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（4）.每条信息在内容管理中都可以额外添加图集,视频,自定义属性
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	4.2单页面信息展示
+
+
+	可以直观的展现信息,如联系我们,资质荣誉,流程展示等,特色如下：
+
+
+	（1）.直接以单页面形式展现信息
+
+
+	（2）.可以选择设置栏目内的基础功能,如“分享,字号大小”
+
+
+	（3）.可以在内容管理中额外添加图集,视频,自定义属性
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	4.3门店商户
+
+
+	以地图定点,列表等展现门店商户信息,如美食商家、连锁店等,特色如下：
+
+
+	（1）.可以通过分类,距离,和排序方式筛选信息
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（2）.列表展示和地图展现相互切换
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（3）.每个商户可以添加
+
+
+	电话（可以直拨）和地址（地图行车路线导航）
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（4）.每个商户下方可以添加产品信息,或直接引用信息展示类的栏目信息，可单独预约某个产品
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（5）.可以选择设置栏目内的基础功能,如“分享,收藏,评论”
+
+
+	（6）.每条信息都可以添加图集,视频,自定义属性
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	（7）.允许用户在手机端添加商户信息
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	在后台的显示如下，需APP拥有者审核，审核通过才会手机终端显示：
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+4.4预约项目
+
+
+	用户选择单个或多个项目进行预约,如“试驾预约”,“包厢预约”,“家庭清洁”等。
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	预约时能自动获得预约人的地址定位信息,传给后台显示。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;在手机终端上，预约的情况可以在手机用户中心查看：
+
+
+	&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	4.5友情链接
+
+
+	在内容管理中可以添加友情链接,每个链接可以设置LOGO,常用于推荐一些名站和其他应用的下载地址。
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+
+	&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;
+
+
+	5、设置栏目外链
+
+
+	一个栏目可以直接连接到一个外链，外链的阅读还在本APP内，因为模板中安置了内置浏览器；
+
+
+	&nbsp;
+
+
+	&nbsp;
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                        </a>
+                    </li>
+        		        		</ul>
+        		        		        		        		        		        		<ul id="czsc_2" class="help_list_ope" style="display: none;">
+        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/55991e96-ab19-4eb4-bd65-cb6f9df67ea3.html" title="“商城版”-“信息管理、应用参数、常用功能”" target="_blank">
+                            <h1>“商城版”-“信息管理、应用参数、常用功能”</h1>
+                            <h2>四． &nbsp; &nbsp;&nbsp;信息管理 
+	
+	
+		（一）首页焦点图
+	
+	
+		如图所示，红色区域为焦点图区域：
+	
+	
+		
+	
+	
+		 
+	
+	
+		点击添加，焦点图需链接到相应的栏目或者商品，选择后上传图片，即可：
+	
+	
+		 
+	
+	
+		
+			（二）首页主题分类 
+		
+		
+			如图所示，红色区域为主题分类区域，如果后台不填充数据，则此区域在用户手机上不会出现：
+		
+		
+			
+		
+		
+			 
+		
+		
+			点击添加，可以进行文字的输入或者直接在做成背景图上传。
+		
+		
+			 
+		
+		
+			
+				（三）首页logo 
+			
+			
+				如图所示，红色区域为logo区域，可设置文字或logo，logo建议做成透明的才好看。
+			
+			
+				
+			
+			
+				 
+			
+			
+				
+					（四）通知公告 
+				
+				
+					点击添加，如图所示，其中，摘要显示在手机端的说明里： 
+				
+				
+					
+				
+				
+					 
+				
+				
+					在手机端显示如下：
+				
+				
+					 
+				
+				
+					
+						（五）门店列表 
+					
+					
+						点击添加门店，输入地址，添加地图后，可对门店进行导航： 
+					
+					
+						
+					
+					
+						 
+					
+					
+						
+							（六）用户添加门店 
+						
+						
+							用户可在手机端添加门店，点击“+”如图所示： 
+						
+						
+							
+						
+						
+							 
+						
+						
+							
+								在出现的页面上，按照提示添加信息：
+							
+							
+								如图所示： 
+							
+							
+								
+							
+							
+								 
+							
+							
+								添加后，App后台审核：
+							
+							
+								 
+							
+							
+								如果选择入库，则在手机端“门店列表”中有显示，如果删除，手机端则没有信息显示：
+							
+							
+								 
+							
+							
+								
+									（七）关于我们 
+								
+								
+									企业的名称，logo，简介，联系人，电话，地址在此可以录入，其中电话可以一键拨号，地址可以进行导航，按照提示添加即可，如图所示：
+								
+								
+									
+								
+								
+									 
+								
+								
+									
+										五．应用参数 
+									
+									
+										（一）模块别名 
+									
+									
+										可根据自己的需求，对相应的栏目进行别名的更新，栏目的排序除了首页和更多在固定的位置，其他的循序通过排序栏的时间调整进行排序的调整：
+									
+									
+										
+									
+									
+										 
+									
+									
+										
+											（二）功能设置 
+										
+										
+											可根据需要，对系统的功能进行选择，如果不选择勾，则此功能在系统中不会出现： 
+										
+										
+											
+										
+										
+											 
+										
+										
+											
+												（三）热门搜索词 
+											
+											
+												站内搜索的功能，可设置搜索词，如果进行了设置，在手机终端就会出现关键词：
+											
+											
+												
+											
+											
+												 
+											
+											
+												 
+											
+											
+												
+													（四）敏感词过滤
+												
+												
+													可对网络上的敏感词进行过滤，如图所示： 
+												
+												
+													
+												
+												
+													 
+												
+												
+													
+														六． 常用功能 
+													
+													
+														（一）快改 
+													
+													
+														快改指可对当下页面上的内容直接更改，如图所示，当下页面的内容可直接更改：
+													
+													
+														
+													
+													
+														 
+													
+													
+														
+															（二）排序 
+														
+														
+															需对页面上栏目的顺序进行调整时，调整排序中的时间即可，时间越前的越往前排，如图所示：
+														
+														
+															
+														
+														
+															 
+														
+														
+															
+																（三）第三方登录 
+															
+															
+																用户中心，可新注册，也可进行第三方登录，如图所示： 
+															
+															
+																
+															
+															
+																 
+															
+															
+																
+																	（三）消息推送 
+																
+																
+																	可从“商品”中推送或者“活动”、“团购”、“秒杀”中推送，推送后的可链接关联的页面。 
+																
+																
+																	
+																
+																
+																	 
+																
+																
+																	如图所示：
+																
+																
+																	 
+																
+																
+																	手机端显示如下：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/d06a006d-914b-4de1-b0d0-5b2176816c65.html" title="“商城版”-“会员系统、促销系统”" target="_blank">
+                            <h1>“商城版”-“会员系统、促销系统”</h1>
+                            <h2>二．会员系统 
+
+
+	（一）会员列表 
+
+
+	添加会员，按照提示添加，添加后即在会员列表中出现：
+
+
+	 
+
+
+	可对会员的信息进行相关操作，查看订单，基本信息，帐号信息，修改积分，充值密码：
+
+
+	 
+
+
+	其中修改积分：可对用户的积分进行修改，累计积分和可用积分，可用积分可用来兑换优惠券如图所示：
+
+
+	 
+
+
+	
+
+
+	重置密码：可重新置换用户登录的密码。
+
+
+	（二）会员规则 
+
+
+	对会员规则可以选择，点击保存后即可：
+
+
+	
+
+
+	 
+
+
+	
+
+
+	需要用户登录后才能进系统：指用户要查看内容，要注册登录后才能看到；
+
+
+	允许用户注册：用户想成为会员必须要先注册；
+
+
+	用户注册后需后台审核：用户注册后，不能继续用，需在后台进行审核，只有状态是正常是能使用，待审核的状态需后台审核后，才能购物和登录，状态是禁用的，不能购物和登录。
+
+
+	（三）评论列表 
+
+
+	在此栏目可查看到所有评论，对评论可进行显示或不显示的选择，如果选择不显示，则用户看不到相应的评论：
+
+
+	
+
+
+	 
+
+
+	
+
+
+	（四）在线客服 
+
+
+	在此栏目可进行在线客服的服务，如图所示：
+
+
+	
+
+
+	 
+
+
+	手机端如图所示：
+
+
+	 
+
+
+	
+
+
+	（五）意见反馈 
+
+
+	用户的意见反馈内容在此可查阅，可删除：
+
+
+	
+
+
+	 
+
+
+	手机端如图所示：
+
+
+	 
+
+
+	
+
+
+	三． 促销系统 
+
+
+	（一）活动列表 
+
+
+	添加需开展的活动，按照指示添加：
+
+
+	 
+
+
+	
+
+
+	可添加多个活动，效果如图所示：
+
+
+	 
+
+
+	活动添加成功后，即可添加参与活动的商品，输入商品名和活动价：
+
+
+	 
+
+
+	手机端如图所示：
+
+
+	 
+
+
+	
+		（二）团购管理 
+	
+	
+		首先添加团购时间，添加成功后，添加团购的产品，如图所示：
+	
+	
+		
+	
+	
+		 
+	
+	
+		其中订单有效时间：最多168小时，可根据自己需求设置时间，如：
+	
+	
+		 
+	
+	
+		团购说明：可在系统说明基础上，再添加自己需要的说明，如：
+	
+	
+		 
+	
+	
+		在手机端显示，如图所示：
+	
+	
+		 
+	
+	
+		
+			（三）秒杀管理 
+		
+		
+			首先添加秒杀时间，添加成功后，添加秒杀的产品，秒杀周期不能超过72小时。手机端显示未来72小时内未开始的和正在进行中的秒杀，如图所示：
+		
+		
+			 
+		
+		
+			
+		
+		
+			在手机端显示如下：
+		
+		
+			 
+		
+		
+			其中订单有效时间：最多3小时，可根据自己需求设置时间，如：
+		
+		
+			 
+		
+		
+			秒杀说明：可在系统说明基础上，再添加自己需要的说明，如：
+		
+		
+			 
+		
+		
+			
+				（四）优惠券生成 
+			
+			
+				优惠券生成中，可对优惠券的规则进行设置，如图：
+			
+			
+				
+			
+			
+				 
+			
+			
+				
+					一次最多生成500张优惠券，如果需要更多，再继续生成即可。
+				
+				
+					（五）优惠券列表 
+				
+				
+					可查看所有生成的优惠券，可对优惠券进行指定发送和批量发送，点击相应按钮即可：
+				
+				
+					
+				
+				
+					 
+				
+				
+					手机端在购物商品结算时可兑换，如果所示：
+				
+				
+					 
+				
+				
+					
+						（六）积分明细 
+					
+					
+						可查看所有的积分行为：
+					
+					
+						
+					
+					
+						 
+					
+					
+						
+							（七）积分规则 
+						
+						
+							可对积分的规则进行设置，如图所示： 
+						
+						
+							
+						
+						
+							 
+						
+						
+							并且可对会员的等级进行设置：
+						
+						
+							 
+						
+						
+							手机端如图所示：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/dcbe8a22-5306-4503-a0ed-b0fe1f407259.html" title="“商城版”-“订单、运费、支付设置等”" target="_blank">
+                            <h1>“商城版”-“订单、运费、支付设置等”</h1>
+                            <h2>爱传app梦工厂提供各行各业的app应用模板，本文提及的商城模板，适合需求电子商务的各个企业，商家等。以下就商城模板的内容管理进行详细阐述：
+
+
+	一． 商品系统 
+
+
+	(一) &nbsp; 分类管理 
+
+
+	商城版中商品分类可以大约等于一级分类，可根据业务特征和消费指引的需要，进行分级。如图所示，在红色部分添加即可。我们以服装来举例，一级分类里反季，婚纱，休闲裤等。
+
+
+	
+
+
+	 
+
+
+	若需添加二级，在左边根节点处，点击想要二级分类的一级类别添加即可，如我想在反季里添加二级分类，点击反季添加，添加三级已经更多分类以此类推即可，如图所示：
+
+
+	 
+
+
+	手机端如图所示：
+
+
+	 
+
+
+	
+
+
+	（二) &nbsp; 商品列表 
+
+
+	可查看所有商品的名称、价格、库存剩余、售出情况。可对本产品进行新品、热推或者上架的选择，如图所示：
+
+
+	
+
+
+	 
+
+
+	手机端如图所示：
+
+
+	 
+
+
+	
+
+
+	(三) &nbsp;添加商品 
+
+
+	根据提示添加商品，商品名称用于识别商品，在商品分类里将商品归属于设置的商品管理，如案例婚纱，在分类管理里设置了婚纱的分类，商品冬季婚纱就可以归类到婚纱这个分类中，如图所示： 
+
+
+	
+
+
+	 
+
+
+	
+
+
+	价格，库存量和售出量，原始数据在初次建立app时手工输入，输入后后续的数据更新是后台自动更新。
+
+
+	商品封面：用于首页，商品列表页等页面的小图展示，建议尺寸是300×300，如图红色标注所示： 
+
+
+	
+
+
+	 
+
+
+	商品图片：用于商品详情页的图片展示，建议尺寸：620X610，如图红色标注显示，
+
+
+	 
+
+
+	图文详情，用于商品详情页的图文展示，如商品海报，大小&lt;1M，如图中红色标注所示： 
+
+
+	说明：可对商品进行文字说明，或者进行超链接，如可连接企业的官网，淘宝等等，可输入网址直接进行超链接，或者输入文字进行超链接：
+
+
+	网址直接链接：
+
+
+	 
+
+
+	文本超级链接，选择需要链接的文字，点击链接按钮，，如图所示：
+
+
+	 
+
+
+	点击后，输入需要链接的地址确定即可，如果所示：
+
+
+	 
+
+
+	手机端效果显示如下；
+
+
+	 
+
+
+	
+
+
+	（四) &nbsp;订单列表 
+
+
+	可查看所有在线订单的情况，如图所示：
+
+
+	
+
+
+	 
+
+
+	所有的订单可添加“快递单号”，方便客户查询：
+
+
+	 
+
+
+	手机端如图所示：
+
+
+	 
+
+
+	修改价格，可对产生的订单进行价格的更改，如图所示：
+
+
+	 
+
+
+	查看修改记录，可对所有的修改行为进行查看，如图所示：
+
+
+	 
+
+
+	导出订单，可对所有的订单进行excel的导出功能：
+
+
+	 
+
+
+	导出订单，如图所示：
+
+
+	 
+
+
+	
+
+
+	(五) &nbsp; 运费设置 
+
+
+	可对不同运费进行设置，添加运费保存即可：
+
+
+	
+
+
+	 
+
+
+	手机端显示如图：
+
+
+	 
+
+
+	
+
+
+	(六） &nbsp;&nbsp;展现形式 
+
+
+	目前可选择两种方式展示，后续再增加，如图所示：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/5691cb12-b0b4-4bc9-9dea-ef565127975e.html" title="“鲜花蛋糕”-“热门搜索词、常用祝福语”等" target="_blank">
+                            <h1>“鲜花蛋糕”-“热门搜索词、常用祝福语”等</h1>
+                            <h2>7、热门搜索词 
+	
+	
+		输入热门搜索词，可以支持站内搜索。如图所示： 
+	
+	
+		
+	
+	
+		 
+	
+	
+		（后台内容添加）
+	
+	
+		 
+	
+	
+		
+			（手机端显示）
+		
+		
+			8、常用祝福语 
+		
+		
+			添加常用祝福语，本栏目专为鲜花模板设置的，在送人鲜花时，一起附上祝福语。其他行业这里可以空了不填写。如图所示：
+		
+		
+			
+		
+		
+			 
+		
+		
+			
+				9、敏感词过滤 
+			
+			
+				可以过滤掉站内不雅，敏感的词语，如草泥马之类的。如图所示： 
+			
+			
+				
+			
+			
+				 
+			
+			
+				
+					10、关于我们 
+				
+				
+					添加公司简介，根据需要添加内容即可，其中电话填写正确，方便用户一键呼叫。如图所示：
+				
+				
+					
+				
+				
+					 
+				
+				
+					（后台内容添加）
+				
+				
+					 
+				
+				
+					
+						（手机端显示）
+					
+					
+						11、意见反馈 
+					
+					
+						可以对用户的意见反馈进行查看和处理，如图所示：
+					
+					
+						
+					
+					
+						 
+					
+					
+						 
+					
+					
+						（手机端显示）</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/c4f62ca0-565d-48ba-bb8b-0f1d03c91f7e.html" title="“鲜花蛋糕”-“首页管理、用户管理、评论管理”" target="_blank">
+                            <h1>“鲜花蛋糕”-“首页管理、用户管理、评论管理”</h1>
+                            <h2>4、首页管理 
+
+
+	（1）焦点图 
+
+
+	根据提示，上传图片，
+
+
+	链接表示用户点击此图时到达的页面。 如图所示：
+
+
+	
+
+
+	 
+
+
+	 
+
+
+	（后台内容添加）
+
+
+	 
+
+
+	
+
+
+	（手机端显示）
+
+
+	（2）主题分类 
+
+
+	根据提示，上传内容，用户点击图片后会链接到分类处的内容页。如图所示：
+
+
+	
+
+
+	 
+
+
+	
+
+
+	（后台内容添加） 
+
+
+	
+
+
+	 
+
+
+	
+
+
+	（手机端显示）
+
+
+	（3）限时特价 
+
+
+	先设置特价的时间，之后添加需要特价的商品，输入编号，点击启用即可发布。如图所示：
+
+
+	
+
+
+	 
+
+
+	
+
+
+	（手机端显示）
+
+
+	
+
+
+	 
+
+
+	
+
+
+	（4）节日特惠
+
+
+	选择添加需节日特惠的产品，输入产品编号，点击启用即可。如图所示：
+
+
+	
+
+
+	 
+
+
+	
+
+
+	（手机端显示）
+
+
+	 
+
+
+	
+
+
+	（5）热卖推荐 
+
+
+	选择添加需热卖推荐的产品，输入产品编号，点击启用即可。如图所示： 
+
+
+	
+
+
+	 
+
+
+	（后台内容添加）
+
+
+	 
+
+
+	
+
+
+	（手机端显示）
+
+
+	5、用户管理 
+
+
+	可以查看所有用户的订单状态情况、基本信息、帐号信息。在此还能用用户重设密码。如图所示：
+
+
+	
+
+
+	 
+
+
+	
+
+
+	 
+
+
+	
+
+
+	6、评论管理
+
+
+	用户已成交过产品，即可进行评论。用户评论的内容，后台可以进行删除，隐藏，显示等操作，根据提示进行即可。如图所示：
+
+
+	 
+
+
+	
+
+
+	（后台显示）
+
+
+	 
+
+
+	（手机端显示）</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/029def70-f102-4495-8412-1c1ca6cffd19.html" title="“鲜花蛋糕”-"商品管理、订单管理、优惠活动”" target="_blank">
+                            <h1>“鲜花蛋糕”-"商品管理、订单管理、优惠活动”</h1>
+                            <h2>爱传APP工厂提供各行各业app模板，本文提及的鲜花蛋糕模板，适合需求电子商务的各中小型企业，商家等。以下就鲜花蛋糕模板的内容管理进行详细阐述：
+
+
+	
+
+
+	1、商品管理 
+
+
+	（1）、添加分类 
+
+
+	根据自身经营特点，分成不同的视角，让用户能根据分类查看到他们想查看的内容。
+
+
+	系统支持至少两级分类。 一级分类：如苏州移动app梦工厂，从功能，价格，对象的角度分成三个一级分类。二级分类：在一级分类里又添加了子类，如功能里，添加了企业展示，电子商务，沟通工具，销售工具。如图所示：
+
+
+	 
+
+
+	（后台内容添加）
+
+
+	 
+
+
+	（手机端显示）
+
+
+	（2）、添加商品 
+
+
+	根据指示，点击添加商品，逐个添加内容即可，其中排序时间，届时可以调整产品的排列顺序。 如图所示：
+
+
+	 
+
+
+	 
+
+
+	2、订单管理 
+
+
+	（1）订单列表 
+
+
+	如果有产生订单，此处可查看各状态记录，待发货，已发货，已提交，已取消。
+
+
+	 
+
+
+	如果是成功订单，在手机终端会有显示，如果所示：
+
+
+	 
+
+
+	（2）运费设置 
+
+
+	自家的运费说明
+
+
+	 
+
+
+	3、优惠活动 
+
+
+	按照指示，添加相关内容，其中启用按钮点击后能立即发布，如果不选择，则在需要的时候点击使用即可。如图所示：
+
+
+	 
+
+
+	（后台内容添加）
+
+
+	 
+
+
+	（手机端显示）
+
+
+	&nbsp;
+
+
+	&nbsp;</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/fc791420-de3d-4e78-a3f4-61fb5406a622.html" title="“房产中介”-“评论管理、应用设置、手机客户端等”" target="_blank">
+                            <h1>“房产中介”-“评论管理、应用设置、手机客户端等”</h1>
+                            <h2>4、评论管理 
+
+
+	（1）、评论列表 
+
+
+	点击评论管理，点击评论列表，可对用户评价批量隐藏、删除，只可评论新房，如图所示：
+
+
+	 
+
+
+	手机客户端显示如下：
+
+
+	 
+
+
+	
+
+
+	（2）、意见反馈 
+
+
+	点击评论管理，点击意见反馈，可对用户意见批量删除，如图所示：
+
+
+	 
+
+
+	
+
+
+	手机客户端显示如下：
+
+
+	 
+
+
+	
+
+
+	5、应用设置 
+
+
+	（1）、焦点图 
+
+
+	根据需要设置焦点图，点击应用设置，点击焦点图，如图所示：
+
+
+	 
+
+
+	
+
+
+	点击添加，选择对应链接，如图所示：
+
+
+	 
+
+
+	点击添加，选择对应链接，如图所示：
+
+
+	 
+
+
+	手机客户端显示如下：
+
+
+	 
+
+
+	
+
+
+	（2）、敏感词过滤 
+
+
+	可对网络上的敏感词进行过滤，如图所示：
+
+
+	 
+
+
+	
+
+
+	
+
+
+	（3）、关于我们 
+
+
+	公司图名称、LOGO、简介、联系人、电话和地址在此可以录入，按照提示添加即可，如图所示：
+
+
+	 
+
+
+	手机客户端显示如下：
+
+
+	 
+
+
+	
+
+
+	（4）、首页图标设置 
+
+
+	点击首页图标设置，可对首页LOGO文字、图片设置，如图所示：
+
+
+	 
+
+
+	
+
+
+	手机客户端显示如下：
+
+
+	 
+
+
+	
+
+
+	6、手机客户端 
+
+
+	（1）、摇一摇 
+
+
+	摇一摇手机，随机摇出附近20公里内的一个楼盘，点击楼盘进入新房详情，再次摇动时，
+
+
+	摇晃后要显示“正在为您寻找楼盘...”，没有结果要显示“没有找到楼盘信息”，如图所示：
+
+
+	 
+
+
+	
+
+
+	
+
+
+	（2）、收藏 
+
+
+	该功能可以收藏新房、二手房、租房，如图所示：
+
+
+	 
+
+
+	
+
+
+	
+
+
+	7、常用功能 
+
+
+	（1）、快改 
+
+
+	快改指可对当下页面上的内容直接更改，如图所示，当下页面的内容可直接更改：
+
+
+	 
+
+
+	
+
+
+	
+
+
+	（2）、推送 
+
+
+	可从新房列表中设置推送，推送后的可关联的页面为设置推送的新房页面，如下图所示：
+
+
+	 
+
+
+	
+
+
+	手机客户端显示如下图：</h2>
+                        </a>
+                    </li>
+        		        		</ul>
+        		        		        		        		        		        		<ul id="czsc_3" class="help_list_ope" style="display: none;">
+        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/e213bc91-bd03-4007-974a-e0213ec6509d.html" title="“房产内容管理”--“全局分类、房源管理”" target="_blank">
+                            <h1>“房产内容管理”--“全局分类、房源管理”</h1>
+                            <h2>1、全局分类 
+
+
+	（1）、区域管理 
+
+
+	根据提示，点击全局分类，点击区域管理进行区域添加，如图所示：
+
+
+	 
+
+
+	添加完成后，点击添加商圈，如下图：
+
+
+	 
+
+
+	添加后如下图：
+
+
+	 
+
+
+	
+
+
+	（2）、状态管理 
+
+
+	点击状态管理，如待售、期房、现房、尾房，点击添加，如图所示：
+
+
+	
+
+
+	 
+
+
+	添加完毕，如图所示：
+
+
+	 
+
+
+	
+
+
+	（3）、楼型管理 
+
+
+	点击楼型管理，如多层、低层、小高层、高层、超高层，点击添加，添加完成后如图所示：
+
+
+	
+
+
+	 
+
+
+	
+
+
+	（4）、类型管理 
+
+
+	点击类型管理，如普通住宅、花园洋房、别墅、单身公寓、复式、写字楼等等，点击添加，添加完成后如图所示：
+
+
+	 
+
+
+	
+
+
+	（5）、装修度管理 
+
+
+	点击装修度管理，点击添加，添加完成后如图所示： 
+
+
+	
+
+
+	 
+
+
+	
+
+
+	（6）、新房图库分类 
+
+
+	点击新房图库分类，点击添加，添加完成后如图所示：
+
+
+	
+
+
+	 
+
+
+	
+
+
+	（7）、按揭利率 
+
+
+	点击按揭利率，点击添加，利率性质可选商业贷款和公积金贷款，如图所示：
+
+
+	
+
+
+	 
+
+
+	添加完毕后，如图所示：
+
+
+	 
+
+
+	手机客户端显示为房贷计算器，如下图：
+
+
+	 
+
+
+	
+
+
+	2、房源管理 
+
+
+	（1）、新房列表 
+
+
+	点击房源管理，点击添加新房列表，如图所示：
+
+
+	 
+
+
+	点击添加新房，如图所示：
+
+
+	 
+
+
+	 
+
+
+	添加完毕后，可按价格搜索所需房源，显示如下图：
+
+
+	 
+
+
+	
+
+
+	手机客户端显示如下图： 
+
+
+	
+
+
+	（2）、添加新房 
+
+
+	该操作步骤与新房列表中的添加新房操作一样。
+
+
+	（3）、二手房列表 
+
+
+	点击房源管理，点击二手房列表，如图所示：
+
+
+	
+
+
+	 
+
+
+	点击添加二手房，如图所示：
+
+
+	 
+
+
+	添加完毕后，可按价格或面积搜索所需房源，显示如下图：
+
+
+	 
+
+
+	手机客户端显示内容可按条件搜索，如图所示：
+
+
+	 
+
+
+	
+
+
+	（4）、添加二手房 
+
+
+	该操作步骤与二手房列表中的添加二手房操作一样。
+
+
+	（5）、租房列表 
+
+
+	点击房源管理，点击租房列表，如图所示：
+
+
+	 
+
+
+	点击添加租房，如图所示：
+
+
+	 
+
+
+	添加完毕后，可按价格、租房方式、房型等搜索，如下图所示：
+
+
+	 
+
+
+	手机客户端显示内容可按条件搜索，如图所示：
+
+
+	 
+
+
+	
+
+
+	（6）、添加租房 
+
+
+	该操作步骤与租房列表中的添加租房操作一样。</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/e7f1f3b9-9691-43a5-ab94-5d08c3fbfabd.html" title="“影楼”-“联系我们、预约管理、相册管理等”" target="_blank">
+                            <h1>“影楼”-“联系我们、预约管理、相册管理等”</h1>
+                            <h2>三、更多 
+
+
+	（一）联系我们 
+
+
+	上传企业或者商家的相关资料，方便用户及时了解和查询，也便于客户及时联系，获得最新动态。
+
+
+	点击“更多”里面的“联系我们”，出现如下界面，按照要求将红色方框之内的内容根据商家或者企业自身情况填写完整。点击a处“保存”即可。
+
+
+	 
+
+
+	下图是举例上传资料的显示效果：
+
+
+	 
+
+
+	相应的手机端的展示效果如下图所示：
+
+
+	 
+
+
+	
+
+
+	四、预约管理 
+
+
+	客户可以随时随地提前预约拍写真、婚纱等等，只需在手机上填写相关信息提交即可。
+
+
+	打开后台管理的“预约管理”如下图所示： 
+
+
+	
+
+
+	 
+
+
+	下图是有用户提交预约后，后台显示：
+
+
+	 
+
+
+	在手机端对应的效果如下图所示：
+
+
+	 
+
+
+	
+		五、相册管理 
+	
+	
+		商家会把一些产品和服务过程中珍贵的相片留下来，供用户参考和欣赏。
+	
+	
+		打开后台相册管理界面如下图所示：
+	
+	
+		 
+	
+	
+		
+			企业或者商家添加相册步骤流程图如下:
+		
+		
+			点击“添加”按钮，将相关资料填写完整，最后点击“完成”即可。
+		
+		
+			 
+		
+		
+			
+		
+		
+			上传相片后台效果图如下：
+		
+		
+			 
+		
+		
+			手机端显示效果图：
+		
+		
+			 
+		
+		
+			
+				六、常用功能 
+			
+			
+				(一）快改 
+			
+			
+				快改指可对当下页面上的内容直接更改，如图所示，当下页面的内容可直接更改：
+			
+			
+				
+			
+			
+				 
+			
+			
+				
+					（二）详细 
+				
+				
+					通过详细，操作者可以预览一下上传到手机上的效果图，方便客户及时修改：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/bac40b13-7d42-471e-8899-aec2829f693d.html" title="“影楼”-“流程介绍、摄影名师、套餐推荐”" target="_blank">
+                            <h1>“影楼”-“流程介绍、摄影名师、套餐推荐”</h1>
+                            <h2>（三）流程介绍 
+
+
+	可以上传婚礼过程流程图，方便客户了解以便及时做好相应准备。
+
+
+	打开后台管理，点击“流程介绍”，出现下图右方所示，上传婚礼流程图，点击“完成”即可保存成功。 
+
+
+	
+
+
+	 
+
+
+	上传婚礼流程时后台效果：
+
+
+	 
+
+
+	手机上的对应展示效果：
+
+
+	 
+
+
+	
+
+
+	（四）摄影名师 
+
+
+	上传摄影师的相关个人资料和作品等等，方便用户了解和选择。
+
+
+	后台“摄影名师”管理如下图所示：
+
+
+	
+
+
+	 
+
+
+	点击下图“添加”按钮，出现如下图右边所示，将资料填写完整，勾选“启用”并且点击“保存”即可。（具体流程按下图a、b、c所示）
+
+
+	 
+
+
+	如下图所示，后台上传摄影名师资料(可上传多个摄影名师资料）：
+
+
+	 
+
+
+	对应手机端显示效果如下：
+
+
+	 
+
+
+	
+		（五）套餐推荐 
+	
+	
+		向用户推荐套餐活动，以多种方式推销服务，让客户觉的更实惠。
+	
+	
+		在后台“服务项目管理”里面点击“套餐推荐”出现如下界面： 
+	
+	
+		点击“添加”，出现如右图所示，将资料填写完整，勾选“启用”并且“保存”即可（可上传多个套餐组合）操作步骤如下图a、b、c所示。
+	
+	
+		 
+	
+	
+		下图是上传资料示意图：
+	
+	
+		 
+	
+	
+		对应的手机端显示效果如下图所示：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/b335af76-6efc-4905-a990-600c9b376152.html" title="“影楼”--“幻灯片设置、名品礼服、活动信息”" target="_blank">
+                            <h1>“影楼”--“幻灯片设置、名品礼服、活动信息”</h1>
+                            <h2>一、首页管理 
+
+
+	&nbsp;（一） &nbsp;幻灯片设置 
+
+
+	幻灯片，即打开应用出现的图片，可插入多张图片。
+
+
+	 
+
+
+	
+		打开后台管理系统，如下图所示：
+	
+	
+		点击“首页管理”即会弹出“幻灯片设置”，点击如下图所示“添加”按钮，上传商家相关的资料，最后勾选“启用”点击“提交”，即可保存成功（可添加多张图片）。 
+	
+	
+		
+	
+	
+		 
+	
+	
+		上传资料前后的对比：
+	
+	
+		 
+	
+	
+		手机端显示如下：
+	
+	
+		 
+	
+	
+		
+			二、服务项目管理 
+		
+		
+			（一）、名品礼服 
+		
+		
+			商家可以上传婚纱的具体品牌、款式、颜色等等。
+		
+		
+			点击后台“服务项目管理”的“名品礼服”如下图所示： 
+		
+		
+			
+		
+		
+			 
+		
+		
+			点击“添加分类”输入分类的名称，如下图所示：
+		
+		
+			 
+		
+		
+			
+				点击“添加图片”，如下图所示：
+			
+			
+				商家只需根据自身情况，填写完整并上传图片，勾选“启用”并点击“完成”即可保存成功。（可添加多张图片）
+			
+			
+				
+			
+			
+				 
+			
+			
+				上传完之后，手机端显示：
+			
+			
+				 
+			
+			
+				
+					（二）活动信息 
+				
+				
+					企业或者商家可以添加最新活动，让用户及时了解企业或者店家最新动态和最新优惠活动。
+				
+				
+					后台管理打开如下图所示：
+				
+				
+					
+				
+				
+					 
+				
+				
+					点击“活动信息”按“添加”按钮，添加活动的相关信息资料，填写完整之后按“保存”即可。（具体操作如下图（a、b、c)所示：
+				
+				
+					 
+				
+				
+					下图是后台上传图片时的效果（可添加多个活动信息）：
+				
+				
+					 
+				
+				
+					活动信息在后台上传之后，在手机端是这样显示的：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/a9762649-5521-489e-a3ee-807dcdaa509d.html" title="“美容美发”--“用户管理、关于我们、常用功能”" target="_blank">
+                            <h1>“美容美发”--“用户管理、关于我们、常用功能”</h1>
+                            <h2>12、用户管理 
+
+
+	点击用户管理，可以按状态查看用户，可以查看用户账号信息，可以重置密码，如下图所示：
+
+
+	 
+
+
+	手机客户端显示如下图：
+
+
+	 
+
+
+	
+		13、关于我们 
+	
+	
+		公司图片、名称、地址、公司说明和电话在此可以录入，其中电话可以一键拨号，地址可以进行导航，按照提示添加即可，如图所示：
+	
+	
+		
+	
+	
+		 
+	
+	
+		手机客户端显示如下图：
+	
+	
+		 
+	
+	
+		
+			14、常用功能 
+		
+		
+			（一）快改 
+		
+		
+			快改指可对当下页面上的内容直接更改，如图所示，当下页面的内容可直接更改：
+		
+		
+			
+		
+		
+			 
+		
+		
+			
+				（二）评论 
+			
+			
+				手机客户端可对产品单一评论，如下图所示：
+			
+			
+				
+			
+			
+				 
+			
+			
+				
+					（三）消息推送 
+				
+				
+					可从套餐服务中设置推送，推送后的可关联的页面为设置推送的套餐，如下图所示：
+				
+				
+					
+				
+				
+					 
+				
+				
+					手机客户端显示内容如下：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/1bf2d73d-ca67-470c-9133-b4dbaa8dbe61.html" title="“美容美发”--“优惠活动、公告、评价管理”" target="_blank">
+                            <h1>“美容美发”--“优惠活动、公告、评价管理”</h1>
+                            <h2>9、优惠活动 
+
+
+	点击优惠活动，点击添加商品，如下图所示：
+
+
+	 
+
+
+	手机客户端显示如下图：
+
+
+	 
+
+
+	
+		10、公告 
+	
+	
+		点击公告，点击添加公告，如下图所示：
+	
+	
+		
+	
+	
+		 
+	
+	
+		手机客户端如图所示：
+	
+	
+		 
+	
+	
+		
+			11、评价管理 
+		
+		
+			点击评价管理，可看到用户的评价，如图所示：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/7e82c717-f85b-4356-a669-aa498d977282.html" title="“美容美发”--“价目表、套餐服务、产品推荐”" target="_blank">
+                            <h1>“美容美发”--“价目表、套餐服务、产品推荐”</h1>
+                            <h2>6、价目表 
+
+
+	（1）、添加分类 
+
+
+	点击添加分类，如下图所示：
+
+
+	 
+
+
+	 
+
+
+	点击添加内容，注意选择分类，如下图所示：
+
+
+	 
+
+
+	添加完毕，如下图所示：
+
+
+	 
+
+
+	手机客户端显示如下图：
+
+
+	 
+
+
+	
+		7、套餐服务 
+	
+	
+		点击套餐服务，选择添加套餐，如下图所示：
+	
+	
+		
+	
+	
+		 
+	
+	
+		手机客户端显示如下图：
+	
+	
+		 
+	
+	
+		 
+		
+			8、产品推荐 
+		
+		
+			（1）、产品列表&nbsp; 
+		
+		
+			
+		
+		
+			 
+		
+		
+			手机客户端显示如下图：</h2>
+                        </a>
+                    </li>
+        		        		</ul>
+        		        		        		        		        		        		<ul id="czsc_4" class="help_list_ope" style="display: none;">
+        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/bb07310f-62fd-4c52-9916-e2b729ab340b.html" title="“美容美发”--“美容项目展示、发型师、美容师”" target="_blank">
+                            <h1>“美容美发”--“美容项目展示、发型师、美容师”</h1>
+                            <h2>3、美容项目展示 
+
+
+	（1）、美容项目分类 
+
+
+	点击美容项目分类，点击添加分类，如下图所示：
+
+
+	 
+
+
+	
+		（2）、美容项目列表 
+	
+	
+		点击美容项目列表，点击添加项目，如下图所示：
+	
+	
+		
+	
+	
+		
+	
+	
+		 
+	
+	
+		手机客户端显示如下：
+	
+	
+		 
+	
+	
+		
+			4、发型师 
+		
+		
+			（1）、发型师等级 
+		
+		
+			点击发型师等级，点击添加等级，如下图所示：
+		
+		
+			 
+		
+		
+			添加完毕，如下图：
+		
+		
+			 
+		
+		
+			
+				（2）、发型师列表 
+			
+			
+				点击发型师列表，点击添加人员，注意人员分类的选项，如下图：
+			
+			
+				
+			
+			
+				 
+			
+			
+				添加完毕后，如下图：
+			
+			
+				 
+			
+			
+				手机客户端显示如下图：
+			
+			
+				 
+			
+			
+				
+					5、美容师 
+				
+				
+					（1）、美容师等级 
+				
+				
+					点击美容师等级，点击添加等级，如下图：
+				
+				
+					
+				
+				
+					 
+				
+				
+					
+						（2）、美容师列表 
+					
+					
+						点击美容师列表，点击添加人员，注意人员分类选项，如下图：
+					
+					
+						
+					
+					
+						 
+					
+					
+						手机客户端显示如下图：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/2f5f6452-3fe7-4035-8b19-2c3bd854579c.html" title="“美容美发”--"焦点图、发型分类、发型列表"" target="_blank">
+                            <h1>“美容美发”--"焦点图、发型分类、发型列表"</h1>
+                            <h2>1、首页 
+
+
+	（1）、焦点图 
+
+
+	根据提示，点击焦点图，对焦点产品进行添加，如图所示：
+
+
+	 
+
+
+	点击新建，上传图片，建议尺寸640*344，链接表示用户点击此图时到达的页面，如图所示：
+
+
+	 
+
+
+	
+		注：链接内容需在功能模块管理中设置。 
+	
+	
+		点击焦点图，手机客户端显示内容如下： 
+	
+	
+		
+	
+	
+		 
+	
+	
+		
+			2、发型展示 
+		
+		
+			（1）、发型分类 
+		
+		
+			点击发型分类，点击添加分类，点击保存，如下图：
+		
+		
+			 
+		
+		
+			根据发型分类的要求，确保每个一级分类下都有二级分类，点击添加子类，如下图：
+		
+		
+			 
+		
+		
+			 
+		
+		
+			
+				（2）、发型列表 
+			
+			
+				点击发型列表，可看到发型分类里添加的二级分类的内容，如下图：
+			
+ 
+			
+				
+			
+			
+				手机客户端显示如下图：
+			
+			
+				 
+			
+			
+				
+					3、美容项目展示 
+				
+				
+					（1）、美容项目分类 
+				
+				
+					点击美容项目分类，点击添加分类，如下图所示：
+				
+				
+					 
+				
+				
+					
+						（2）、美容项目列表 
+					
+					
+						点击美容项目列表，点击添加项目，如下图所示：
+					
+					
+						
+					
+					
+						
+					
+					
+						 
+					
+					
+						手机客户端显示如下：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/8f0d4bc8-83d4-4273-be78-17d44107ff4b.html" title="“教育内容管理”--“常用功能”" target="_blank">
+                            <h1>“教育内容管理”--“常用功能”</h1>
+                            <h2>三、常用功能 
+
+
+	（一）快改 
+
+
+	快改指可对当下页面上的内容直接更改，如图所示，当下页面的内容可直接更改：
+
+
+	 
+
+
+	
+		（二）推送 
+	
+	
+		可从资讯中设置推送，推送后的可关联的页面为设置推送的资讯，如下图所示：
+	
+	
+		
+	
+	
+		 
+	
+	
+		手机客户端显示如下图：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/5045f514-3375-4f29-b94b-d85c4b0ddf32.html" title="“教育”--“资讯、搜课筛选、在线咨询管理”" target="_blank">
+                            <h1>“教育”--“资讯、搜课筛选、在线咨询管理”</h1>
+                            <h2>（七）、资讯 
+
+
+	点击资讯，点击添加内容，如图所示：
+
+
+	 
+
+
+	添加内容里，可以加入超链接，打开类型可以是新窗口或者当前窗口，如图所示：
+
+
+	 
+
+
+	手机客户端显示如下图：
+
+
+	 
+
+
+	
+		（八）、搜课筛选 
+	
+	
+		点击搜课筛选，点击添加分类，分类可选择课程类型、培训阶段、培训模式，添加次级分类，如图所示：
+	
+	
+		 
+	
+	
+		如课程类型，次级分类如下图：
+	
+	
+		 
+	
+	
+		添加完成后，打开手机客户端，搜课里的课程为课表课程，点击筛选，显示如下图：
+	
+	
+		 
+	
+	
+		点击完成，即可得到筛选课程。
+	
+	
+		
+	
+	
+		
+			三、在线咨询管理 
+		
+		
+			点击在线咨询管理，如图所示：
+		
+		
+			 
+		
+		
+			用户有问题提交之后，后台显示如图：
+		
+		
+			 
+		
+		
+			点击未答复，可对用户问题进行回复，如图所示不：
+		
+		
+			 
+		
+		
+			手机客户端显示如下图：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/118cebcb-fe2b-40a0-b6f1-8cb34afa0960.html" title="“教育”--“留学考试、联系我们、预约登记-查询”" target="_blank">
+                            <h1>“教育”--“留学考试、联系我们、预约登记-查询”</h1>
+                            <h2>（四）、留学考试 
+
+
+	点击留学考试，点击添加目录，传图片，建议尺寸110*110，如图所示：
+
+
+	 
+
+
+	点击添加内容，如图所示：
+
+
+	 
+
+
+	手机客户端显示如图：
+
+
+	 
+
+
+	
+
+
+	
+		（五）、联系我们 
+	
+	
+		点击联系我们，上传LOGO，建议尺寸570*300，如图所示：
+	
+	
+		 
+	
+	
+		手机客户端显示如图：
+	
+	
+		 
+	
+	
+		
+			（六）、预约登记-查询 
+		
+		
+			客户可以随时随地提前预约选择课程、老师等等，只需在手机上填写相关信息提交即可。
+		
+		
+			打开后台管理的“预约登记-查询”如下图所示：
+		
+		
+			 
+		
+		
+			下图是有用户提交预约后，后台显示：
+		
+		
+			 
+		
+		
+			手机客户端显示如下图：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/5417f01a-0d22-4bd8-adb3-710e79181f32.html" title="“教育”操作手册-"课表、用户会员及资料、中心介绍”" target="_blank">
+                            <h1>“教育”操作手册-"课表、用户会员及资料、中心介绍”</h1>
+                            <h2>（一）、课表 
+
+
+	点击后台“功能模块管理”的“课表”， 点击“添加目录”输入目录的名称，如下图所示：
+
+
+	 
+
+
+	
+
+
+	手机客户端显示内容如下：
+
+
+	 
+
+
+	点击“添加内容”，点击目录选择课程，输入课程内容，“点击”确认，即可保存成功。
+
+
+	 
+
+
+	手机客户端显示内容如下：
+
+
+	 
+
+
+	（二）、用户会员及资料 
+
+
+	可查看用户详细信息，可对用户资料修改、删除和重置密码。
+
+
+	 
+
+
+	
+
+
+	选择修改，修改用户类型为会员时，点击选择课程修改，即可下载学员资料。
+
+
+	 
+
+
+	手机客户端显示如下图：
+
+
+	 
+
+
+	
+	
+		（三）、中心介绍 
+	
+	
+		点击中心介绍，点击添加内容，选择分类，上传图片，建议尺寸118*144，如图所示：
+	
+	
+		 
+	
+	
+		
+	
+	
+		 
+	
+	
+		手机客户端显示如图：</h2>
+                        </a>
+                    </li>
+        		        		        		        		        		                	<li>
+                    	<a href="http://www.iappk.com:80/helpdetail/e903a509-4148-45b3-b92d-b2cb2ffaf804.html" title="“教育”操作手册-首页管理“焦点图设置”" target="_blank">
+                            <h1>“教育”操作手册-首页管理“焦点图设置”</h1>
+                            <h2>一、首页管理 
+
+
+	&nbsp;（一） &nbsp;焦点图设置根据提示，点击焦点图，对焦点产品进行添加，如图所示：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	
+
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 点击新建，上传图片，建议尺寸640*290，链接表示用户点击此图时到达的页面，如图所示：
+
+
+	&nbsp;&nbsp;&nbsp;
+
+
+	 
+
+
+	 
+
+
+	
+
+
+	&nbsp;</h2>
+                        </a>
+                    </li>
+        		        		</ul>
+        		        		        						<div class="clearfix">
+                	<a href="http://www.iappk.com:80/help/javascript:void(0)" class="arrow_l" onclick="f_pre('czsc');"></a>
+                	<a href="http://www.iappk.com:80/help/javascript:void(0)" class="arrow_r" onclick="f_next('czsc');"></a>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="con_bg_01"></div>
+<div class="index_contact">
+	<table cellpadding="0" cellspacing="0" class="index_contact_con_t">
+    	<tr>
+        	<td align="right"><h1>App制作推广自助平台</h1></td>
+            <td>
+                <a href="http://www.iappk.com:80/help/javascript:void(0);" title="爱传官方app"><img src="../images/index_contact_icon_01.png" alt="爱传官方app"></a>
+                <a href="http://www.iappk.com:80/help/javascript:void(0);" title="爱传官方微信"><img src="../images/index_contact_icon_02.png" alt="爱传官方微信"></a>
+                <a href="http://weibo.com/appkfactory" target="_blank" class="index_contact_icon_01" title="关注爱传官方新浪微博"><i></i></a>
+                <a href="http://t.qq.com/appkfactory" target="_blank" class="index_contact_icon_02" title="关注爱传官方腾讯微博"><i></i></a>
+            </td>
+            <td align="left">
+                <h1>欢迎拨打 400-188-2626</h1>
+            </td>
+        </tr>
+    </table>
+    <div class="line_02 mart40"></div>
+	<table cellpadding="0" cellspacing="0" class="index_contact_con">
+    	<tr>
+        	<td>
+            	<a href="../about.html" target="_blank" title="关于爱传"><h1>关于我们</h1></a>
+            	<a href="../about.html#about_01" target="_blank" title="公司简介">公司简介</a>
+            	<a href="../about.html#about_02" target="_blank" title="组织架构">组织架构</a>
+            	<a href="../about.html#about_03" target="_blank" title="荣誉资质">荣誉资质</a>
+            	<a href="../about.html#about_04" target="_blank" title="联系我们">联系我们</a>
+            </td>
+        	<td>
+            	<a href="../agent.html" target="_blank" title="市场辐射"><h1>市场辐射</h1></a>
+            	<a href="../agent.html#agent_01" target="_blank" title="合作申请">合作申请</a>
+            	<a href="../agent.html#agent_02" target="_blank" title="合作政策">合作政策</a>
+            	<a href="http://www.iappk.com:80/help/javascript:void(0);" onclick="window.open('http://crm.iappk.com/agentCenterLogin.do');"  title="伙伴登录">伙伴登录</a>
+            </td>
+        	<td>
+            	<a href="../recruit.html" target="_blank" title="招兵买马"><h1>招兵买马</h1></a>
+            	<a href="../recruit.html#recruit_01"  target="_blank" title="招聘岗位">招聘岗位</a>
+            	<a href="../recruit.html#recruit_02"  target="_blank" title="人才理念">人才理念</a>
+            	<a href="../recruit.html#recruit_03"  target="_blank" title="团队风采">团队风采</a>
+            	<a href="../recruit.html#recruit_04"  target="_blank" title="精彩活动">精彩活动</a>
+            </td>
+        	<td>
+            	<a href="http://www.iappk.com:80/help/javascript:void(0);" title="帮助中心"><h1>帮助中心</h1></a>
+            	<a href="http://www.iappk.com:80/help/javascript:void(0);"  title="常见问题">常见问题</a>
+            	<a href="http://www.iappk.com:80/help/javascript:void(0);"  title="视频教程">视频教程</a>
+            	<a href="http://www.iappk.com:80/help/javascript:void(0);"  title="操作手册">操作手册</a>
+            </td>
+            <td>
+            	<a href="http://www.iappk.com:80/help/javascript:void(0);"><img src="../images/index_contact_logo.png" alt="爱传APP+"></a>
+                <p>双软认证企业</p>
+                <p>江苏省民营科技企业</p>
+                <p>淘宝金牌淘拍档企业</p>
+                <p>江苏省高新技术企业</p>
+                <p>爱传app梦工厂软件著作权</p>
+                <p>常州电子商务协会理事长单位</p>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="foot">
+	<h1>Copyright©2008-2014 powered by iappk.com 版权所有<label>常州香传电子商务有限公司</label><a href="http://www.miitbeian.gov.cn/">苏ICP备12072830号</a><a href="http://www.iappk.com:80/help/javascript:void(0);">网站地图</a>
+	<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4b1b1ab1777e93188c7bc62655b41b1a' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</h1>
+    <h2>本站支持浏览：<img src="../images/icon_chrome.png" alt="谷歌" /><img src="../images/icon_ie.png" alt="IE" /><img src="../images/icon_360.png" alt="360安全浏览器" /><img src="../images/icon_safari.png" alt="safari" /><img src="../images/icon_ff.png" alt="火狐浏览器" /></h2>
+</div>
+
+<div class="float_service clearfix">
+	<ul class="float_service_con">
+    	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=2737046438&site=qq&menu=yes" target="_blank"><img src="../images/float_service_icon.png" alt="代理合作"><i>代理合作</i></a></li>
+    	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=2025346146&site=qq&menu=yes" target="_blank"><img src="../images/float_service_icon.png" alt="售后服务"><i>售后服务</i></a></li>
+    	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=2654445902&site=qq&menu=yes" target="_blank"><img src="../images/float_service_icon.png" alt="客服咨询1"><i>客服咨询1</i></a></li>
+    	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=2016437141&site=qq&menu=yes" target="_blank"><img src="../images/float_service_icon.png" alt="客服咨询2"><i>客服咨询2</i></a></li>
+    	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=2654426785&site=qq&menu=yes" target="_blank"><img src="../images/float_service_icon.png" alt="客服咨询3"><i>客服咨询3</i></a></li>
+    	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=2026796409&site=qq&menu=yes" target="_blank"><img src="../images/float_service_icon.png" alt="客服咨询4"><i>客服咨询4</i></a></li>
+    	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=2861148538&site=qq&menu=yes" target="_blank"><img src="../images/float_service_icon.png" alt="定制专线"><i>定制专线</i></a></li>
+    </ul>
+	<div class="float_service_title">
+    	<a href="http://www.iappk.com:80/help/javascript:void(0)" class="float_service_title_t"></a>
+    	<a href="http://www.iappk.com:80/help/javascript:void(0)" class="float_service_title_b"></a>
+    </div>
+</div>
+</body>
+</html>

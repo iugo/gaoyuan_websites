@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+* {word-break:break-all;font-family:Verdana,Arial}
+body{margin:0;padding:0;font-size:12px;background:#323434;font-family:"宋体,Arial,微软雅黑";min-width:1200px;}
+div,ul,ol,li,h1,h2,h3,h4,h5,h6,form,button,p,th,td,dl,textarea,input,select,button,table,iframe,img,a img{margin:0;padding:0;}
+html{overflow-y:scroll;}
+li{list-style:none;list-style-type:none;}
+a{text-decoration:none;outline:none;blr:expression(this.onFocus=this.blur());cursor:pointer;}/*消除虚线*/
+a:hover{text-decoration:none;}
+img,a img,textarea,button,table{border:none;}
+input,img,select,button,table{vertical-align:middle;}
+input,button,select,textarea{outline:none;}
+input{border:0;}
+textarea{resize:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+table{border-collapse:collapse;border-spacing:0;}
+
+/*basic*/
+.body{background:#fff;}
+
+.f_l{float:left;}
+.f_r{float:right;}
+.c_b{clear:both;}
+.clearfix:after{clear:both;display:block;visibility:hidden;height:0;line-height:0;content:".";}
+.clearfix{*zoom:1;}
+.t_l{text-align:left;}
+.t_c{text-align:center;}
+.t_r{text-align:right;}
+.d_n{display:none;}
+.p_r{position:relative;}
+
+.mart2{margin-top:2px;}
+.mart15{margin-top:15px;}
+.marl20{margin-left:20px;}
+.mart35{margin-top:35px;}
+.mart40{margin-top:40px;}
+.marr60{margin-right:60px;}
+.marl110{margin-left:110px;}
+
+.borr{border-right:1px solid #b8b8b8;}
+
+.wid1080{width:1080px;margin:0 auto;}
+.wid1100{width:1100px;margin:0 auto;}
+.wid1200{width:1200px;margin:0 auto;}
