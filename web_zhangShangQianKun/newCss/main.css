@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 /*share*/
 .button_01{background:#f88c01;height:36px;width:136px;display:block;text-align:center;font:16px/36px "微软雅黑";color:#fff;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;behavior:url(../newjs/radius.htc);}
 .button_01:hover{background:#fe9814;height:36px;width:136px;display:block;text-align:center;font:16px/36px "微软雅黑";color:#fff;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;behavior:url(../newjs/radius.htc);}
@@ -451,7 +451,7 @@
 
 /*服务市场*/
 .service_banner{background:#f5f5f5 url(../images/service_00.jpg) no-repeat center top;height:240px;}
-.service_characteristic{background:#fff url(../images/service_01.jpg) no-repeat center top;height:921px;}
+.service_characteristic{background:#fff url(../images/service_01.jpg) no-repeat center top;height:1082px;}
 .increment{background:#f5f5f5;height:94px;padding-top:28px;}
 .increment span{width:266px;height:60px;margin:0 auto;display:block;} 
 .service_table{background:#fff;padding-top:30px;}

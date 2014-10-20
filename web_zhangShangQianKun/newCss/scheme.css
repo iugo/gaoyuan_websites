@@ -1,4 +1,4 @@
-﻿.scheme{
+.scheme{
 	width: 1080px;
 	margin: 0 auto;
 	font-family: "Microsoft YaHei";
@@ -215,6 +215,7 @@
 }
 .make li{
 	float: left;
+  padding-left: 99px;
 }
 .scheme_but01{
 	background: url(../images/scheme_26.jpg) no-repeat;
