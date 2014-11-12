@@ -1,0 +1,185 @@
+.item-title .item-title-sname { /* max-width: 58%; */ }
+.index-item .hide { display: none; }
+.hotwords-wrapper { background: #fff; border: 1px solid #DADADA; margin: 5px; padding: 10px; }
+.hotwords-title { border-bottom: 1px solid #E3E3E3; height: 0; position: relative; text-align: center; margin: 10px 0; }
+.hotwords-title em { background: #fff; color: #A2A2A2; padding: 0 10px; position: absolute; top: -7px; left: 50%; margin-left: -31px; }
+.hotwords { overflow: hidden; }
+.hotwords .hotword { min-height: 40px; line-height: 40px; font-size: 14px; overflow: hidden; }
+.hotwords li { float: left; width: 33.3%; }
+.hotwords li p a { min-height: 40px; line-height: 40px; text-indent: 8px; display: block; color: #444; overflow: hidden; }
+.hotwords #preload { width: 100%; }
+.bg_sug { background: #C5E7F9; }
+.box h3 { margin-left: 11px; margin-top: 14px; margin-bottom: 12px; color: #999; font-size: 18px; }
+.box .hotwords li { width: auto; margin-bottom: 12px; }
+.box .hotwords .hotword { min-height: 36px; line-height: 36px; overflow: hidden; background: #888; color: #fff; padding: 0 8px; margin-left: 12px; border-radius: 4px; }
+.box .hotwords .hotword p { font-size: 18px; }
+.box-search-outer .box { border: 0; border-top: 1px solid #DADADA; margin: 0; }
+#searchpage-header { background: -webkit-gradient(linear,left top,left bottom,from(#69B238),to(#569B1D)); height: 46px; margin: 0; padding-top: 1px; }
+#big-search-input { margin: 5px 62px 8px 5px; }
+#search-input { padding: 14px 83px 14px 8px; background: -webkit-gradient(linear,left top,left bottom,from(#fafafa),to(#e7e7e7)); border-radius: 3px 0 0 3px; }
+#search-input-area { border-radius: 3px 0 0 3px; -webkit-box-shadow: 1px 1px 2px #afafaf inset; line-height: 35px; color: #A6A6A6; width: 100%; border: 1px solid #888; background: #fff; height: 35px; }
+#search-input-button { border: 1px solid #888; position: absolute; top: 14px; right: 8px; width: 72px; height: 35px; border-radius: 0 3px 3px 0; color: #000; font-size: 16px; font-weight: 700; line-height: 35px; text-align: center; }
+.search-wordborder { border: 2px solid #14A8FF; border-radius: 20px; padding: 3px; }
+.search-btn-click, .big-search-btn-click #search-button-inner { background: -webkit-gradient(linear,left top,left bottom,from(#6CBE24),to(#8ACE31)) !important; }
+#search-info { font-size: 24px; }
+#search-icon { margin: auto; background-position: 0 -51px; width: 21px; height: 21px; }
+.noResponse { padding: 20px; margin: 0 20px; line-height: 200%; border-bottom: 1px solid #E7E7E7; color: #8A8A8A; }
+.noResponse p { font-size: 16px; }
+.noResponse .notice { color: #303030; font-weight: 700; }
+.noresults-rec h3 { padding: 20px; font-size: 16px; }
+.noresults-rec ul { display: -webkit-box; display: box; margin-bottom: 20px; }
+.noresults-rec li { -webkit-box-flex: 1; box-flex: 1; text-align: center; width: 150px; }
+.noresults-rec li a { color: #303030; }
+.noresults-rec li a img { vertical-align: top; margin-bottom: 5px; width: 56px; height: 56px; }
+.noresults-rec li p { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.searchList-officialIcon { background: url(/images/guanfang_flag.png); background-repeat: no-repeat; background-position: 0 0; display: inline-block; width: 26px; height: 15px; margin-left: 5px; position: relative; top: 2px; background-size: 26px 13px; -webkit-background-size: 26px 13px; }
+.app-list .webapp .item-side .status-download { background-position: -5px -60px; }
+.app-list .webapp .item-side { width: 76px; }
+.app-list .webapp .status-download, .webapp_use, .mask { background: url(/images/webapp_wa.png) no-repeat; background-size: 320px auto; -webkit-background-size: 320px auto; }
+.webapp .item-icon .mask { background-position: -85px -61px; position: absolute; display: block; height: 48px; width: 48px; top: 9px; }
+.webapp .list-item-download .bg_bottom { background-position: -62px -120px; }
+.app-list .item .item-main dd { padding-left: 66px; padding-right: 6px; line-height: 23px; white-space: nowrap; }
+.app-list .item .item-main .item-title h3, .app-list .index-item .index-item-main .item-title h3 { width: 80%; text-overflow: ellipsis; overflow: hidden; }
+#show-more { color: #429dff; font-weight: 400; }
+#show-more .list-more-icon { background: url(/images/icon12.png); background-repeat: no-repeat; background-position: 6px 9px; background-size: 15px 10px; }
+.search-recommend-area { border-top: 0; }
+.app-list .special-item .special { position: relative; overflow: hidden; margin: 10px 9px 0; height: 120px; padding: 18px 0 0; border-top: 1px solid #ddd; border-bottom: 0; border-left: 0; border-right: 0; background: 0; border-radius: 0; }
+.special-item .special .manual-brief { display: inline-block; margin-left: 93px; margin-right: 0; color: #bbb; float: left; line-height: 20px; height: 100px; overflow: hidden; font-size: 14px; text-overflow: ellipsis; }
+.special-item .special .arrow { position: absolute; left: 20px; top: -8px; width: 16px; height: 8px; background: url(/images/icon13.png); }
+.special-item .special img { position: absolute; width: 74px; margin-left: 7px; height: 110px; }
+.app-list .item{ min-height: 67px; margin: 8px; border: 1px solid #D4D5D6; height: auto; background-color: #fff; position: relative; }
+.bg_blue_color { background-color: #c5e7f9 !important; height: auto; border-bottom: 1px #D4D5D6 solid !important; }
+.app-list-recommend { overflow: hidden; }
+.app-list-recommend .bg_blue_color { border-bottom: 0 !important; }
+.inapp_bg_blue_color { background-color: #c5e7f9 !important; }
+.app-list .item .item-main, .app-list .index-item .index-item-main { min-height: 48px; color: #919498; height: auto; padding: 0 65px 0 0; }
+.app-list .index-item .index-item-main .item-summary { padding-left: 10px; }
+.app-list .index-item .index-item-main .item-summary .item-summary-content { margin: 10px 0 2px; line-height: 19px; max-height: 38px; bottom: 15px; color: #999; overflow: hidden; white-space: normal; }
+.app-list .index-item .index-item-main .item-summary .item-summary-content span { color: #2D9F0E; }
+.app-list .item .item-main, .app-list .index-item .inapp-item-main { padding: 6px 0 0; }
+.app-list .inapp-item .inapp-container { margin: 10px 16px 0; }
+.app-list .inapp-item .inapp-container dd { padding-left: 88px; font-size: 0; }
+.app-list .inapp-item .inapp-container .precise-music-tag { margin-top: 5px; padding-left: 0; }
+.app-list .inapp-item .nopic-inapp dd { padding-left: 0; }
+.app-list .inapp-item .inapp-item-icon { float: left; width: 74px; height: 110px; background: #eee; }
+.app-list .inapp-item .inapp-music-container .inapp-item-icon { height: 74px; }
+.app-list .inapp-item .inapp-container .inapp-item-icon img { width: 74px; height: 110px; }
+.app-list .inapp-item .inapp-music-container .inapp-item-icon img { height: 74px; }
+.app-list .inapp-item .inapp-clearfix { clear: both; margin-top: 8px; padding: 6px 0; }
+.app-list .inapp-item .inapp-container .inapp-item-des { padding-left: 0; margin-top: 6px; padding-right: 0; }
+.app-list .inapp-item .inapp-container .inapp-item-des div { white-space: normal; overflow: hidden; line-height: 18px; max-height: 36px; color: #666; }
+.app-list .inapp-item .inapp-container .inapp-item-des span { color: #2b9e0c; }
+.app-list .inapp-item { border: 0; background-color: transparent; }
+.app-list .inapp-item-main { border: 1px solid #D4D5D6; background-color: #fff; }
+.app-list .multiple-from li { margin-left: 0; margin-right: 0; }
+.app-list .inapp-item .inappsource-from { position: relative; margin-top: 12px; height: 32px; line-height: 32px; padding-left: 40px; background-color: #f7f7f7; background-position: 16px 6px; background-repeat: no-repeat; background-size: 20px 20px; }
+.app-list .inapp-item .moresource-from { display: inline-block; position: relative; top: 4px; height: 9px; width: 9px; background: url(/images/icon20.png) 0 0 no-repeat; background-size: 6px 6px; }
+.app-list .source-from-wrap li { margin-left: 14px; margin-right: 14px; height: 36px; line-height: 36px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.app-list .source-from-wrap li img { position: relative; top: 6px; margin-right: 6px; }
+.app-list .source-from-wrap li.currentfrom { background: url(/images/icon14.png) right 12px no-repeat; background-size: 14px 12px; }
+.app-list .tvplay-series-container, .app-list .tvshow-series-container { margin: 10px 16px; padding-top: 8px; border-top: 1px solid #ddd; }
+.app-list .tvplay-series-container .bars span, .app-list .tvshow-series-container .bars span { display: inline-block; height: 26px; line-height: 26px; width: 20%; float: left; text-align: center; font-size: 18px; margin-right: 7px; }
+.app-list .tvplay-series-container .bars span:last, .app-list .tvshow-series-container .bars span:last { margin-right: 0; }
+.app-list .tvshow-series-container .bars span { width: 26%; }
+.app-list .tvplay-series-container .bars .more, .app-list .tvshow-series-container .bars .more { display: inline-block; height: 26px; line-height: 26px; margin-left: 5px; vertical-align: text-top; color: #999; text-decoration: underline; }
+.app-list .tvplay-series-container .bars span.current, .app-list .tvshow-series-container .bars span.current { color: #4297ff; border-bottom: 2px solid #4297ff; }
+.app-list .tvplay-series-container .bars-area, .app-list .tvshow-series-container .bars-area { margin-top: 10px; }
+.app-list .tvplay-series-container .bars-area span { display: inline-block; width: 16%; height: 24px; line-height: 24px; text-align: center; border: 1px solid #ddd; float: left; margin-right: 9px; margin-bottom: 8px; }
+.app-list .tvplay-series-container .bars-area span.five { margin-right: 0; }
+.app-list .tvplay-series-container .bars-area .defaultplay { background: #4297ff; color: #fff; }
+.app-list .tvplay-series-container .bars-area .lost-episode { background: #888; color: #fff; }
+.app-list .tvshow-series-container .bars-area .hide { display: none; }
+.app-list .tvshow-series-container .bars-area li { height: 18px; line-height: 18px; margin-bottom: 10px; background: url(/images/icon21.png) 0 0 no-repeat; background-size: 60px 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.app-list .tvshow-series-container .bars-area .more-shows { padding-left: 37px; color: #106adb; }
+.app-list .tvshow-series-container .bars-area .defaultshow { background: url(/images/icon22.png) 0 0 no-repeat; background-size: 60px 18px; }
+.app-list .tvshow-series-container .bars-area li span { display: inline-block; margin-right: 30px; font-size: 13px; }
+.app-list .tvshow-series-container .bars-area .defaultshow span { color: #ff2323; }
+.app-list .tvshow-series-container .bars-area .wrap { position: relative; }
+.app-list .tvshow-series-container .bars-area .wrap ul { position: relative; z-index: 100; }
+.app-list .tvshow-series-container .bars-area .vline { position: absolute; left: 51px; width: 1px; top: 10px; background: #ebf4fd; z-index: 10; }
+.inapp-music-container .inapp-item-area { margin-top: 0; }
+.inapp-item .inapp-container .inapp-info-error { color: #aaa; }
+.inapp-item .inapp-item-title { font-size: 18px; font-weight: 700; height: 26px; color: #333; max-width: 60%; white-space: nowrap; margin-bottom: 8px; }
+.inapp-item .inapp-catline { position: relative; margin-top: 18px; }
+.inapp-item .inapp-catline .inapp-catline-line { display: block; height: 1px; background: #ddd; margin: 0 16px; }
+.inapp-item .inapp-catline .inapp-catline-text { position: absolute; left: 50%; top: -7px; font-size: 12px; height: 16px; background: #fff; margin-left: -32px; color: #999; }
+.inapp-item .inapp-appinfo, .extensive-inapp-list .inapp-appinfo { height: 75px; display: block; }
+.inapp-item .inapp-ticontent-container .inapp-item-title { margin-bottom: 0; }
+.inapp-item .inapp-ticontent-container .inapp-item-title-name { color: #3898ff; vertical-align: top; display: inline-block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 90%; }
+.inapp-item .inapp-ticontent-container .meta { font-size: 0; border-bottom: 1px solid #ddd; padding-bottom: 12px; }
+.inapp-item .inapp-ticontent-container .meta li { display: inline-block; padding: 0 5px; border-right: 1px solid #dedede; }
+.inapp-item .inapp-ticontent-container .meta li:first-child { padding-left: 0; }
+.inapp-item .inapp-ticontent-container .meta li:last-child { border-right: 0; padding-right: 0; }
+.inapp-ticontent-container .posts li { border-bottom: 1px dotted #ccc; position: relative; }
+.inapp-ticontent-container .posts .inapp-tieba-post { color: #333; height: 3em; line-height: 3em; }
+.inapp-ticontent-container .posts .title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 75%; position: absolute; }
+.inapp-ticontent-container .posts .comments { position: absolute; right: 0; padding-left: 18px; background: url(/images/icon23.png) no-repeat left center; color: #999; }
+.inapp-ticontent-container .inapp-view-more { margin-bottom: -1em; height: 3em; line-height: 3em; color: #3898ff; text-align: center; position: relative; z-index: 2; }
+.inapp-item .inapp-item-play { position: absolute; right: 10px; top: 15px; width: 83px; height: 36px; background: url(/images/inapp-bootstrap.png); background-size: 83px auto; }
+.inapp-item .inapp-item-play-tap { background: url(/images/inapp-bootstrap.png) -83px -37px; background-size: 83px auto; }
+.inapp-item .inapp-item-tieba { right: 16px; background-position: 0 -74px; background-size: 83px auto; }
+.inapp-item .inapp-item-tieba-tap { background-position: 0 -258px; background-size: 83px auto; }
+.precise-ticontent-list .item-side { top: auto; bottom: 2px; }
+.inapp-music-container .inapp-item-title { margin-bottom: 0; }
+.inapp-item .inapp-info-t-color { color: #1F95FF; }
+.inapp-item .precise-music-tag .inapp-info-t-color { display: inline-block; height: 20px; line-height: 20px; border: 1px solid #b2d693; background: #f0fce2; color: #7db537; padding: 0 5px; margin-right: 5px; }
+.inapp-item .precise-music-tag .current-tag { color: #4e850e; background: #dbf3bf; }
+.inapp-item-title, .inapp-item-area, .inapp-item-year, .inapp-item-type, .inapp-item-person { display: inline-block; max-width: 95%; font-size: 14px; text-overflow: ellipsis; overflow: hidden; height: 20px; line-height: 20px; color: #666; }
+.inapp-music-container .inapp-item-music-c { display: inline-block; max-width: 100%; font-size: 14px; text-overflow: ellipsis; overflow: hidden; height: 17px; line-height: 17px; color: #666; margin-top: 7px; }
+.inapp-music-container .precise-music-tag .inapp-item-music-c { height: inherit; }
+.inapp-music-container .inapp-item-music-anthor { max-width: 60%; }
+.app-list .extensive-inapp-list { border: 0; position: relative; background-color: #f1f1f1; margin: 8px; overflow: hidden; }
+.app-list .extensive-inapp-list .index-item { border: 0; border-top: 1px solid #e4e4e4; margin: 0 10px; padding: 6px 47px 6px 0; min-height: initial; position: relative; }
+.app-list .extensive-inapp-list .extensive-inapp-item:first-child { border-top: 0; }
+.app-list .extensive-inapp-list .inapp-item .inapp-container { margin: 0; height: 45px; padding-top: 3px; position: relative; }
+.app-list .extensive-inapp-list .music-list { background-color: #f1f1f1; overflow: hidden; white-space: nowrap; position: relative; transition: all .3s ease-in-out; -webkit-transition: all .3s ease-in-out; }
+.app-list .extensive-inapp-list .music-list .page { display: inline-block; float: left; background: #fff; border-right: 1px solid #E4E4E4; }
+.app-list .extensive-inapp-list .music-list .page:first-child { border-left: 1px solid #E4E4E4; }
+.app-list .extensive-inapp-list .multiple-from { background: #f1f1f1; }
+.app-list .extensive-inapp-list .multiple-from .index-item { min-height: 67px; margin: 0; position: relative; margin-top: 8px; border: 1px solid #e4e4e4; padding-right: 0; }
+.extensive-inapp-list .inapp-catline { position: relative; margin-top: 0; }
+.extensive-inapp-list .inapp-catline .inapp-catline-line { display: block; height: 1px; background: #ddd; margin: 0 16px; }
+.extensive-inapp-list .inapp-catline .inapp-catline-text { position: absolute; left: 50%; top: -7px; font-size: 12px; height: 16px; background: #fff; padding: 0 6px; margin-left: -30px; color: #999; }
+.extensive-inapp-list .inapp-clearfix { margin-top: 8px; padding: 6px 0; }
+.extensive-inapp-list .extensive-inapp-title { color: #919498; font-size: 14px; height: 38px; line-height: 38px; overflow: hidden; padding-left: 10px; border: 1px solid #E4E4E4; background-color: #fff; }
+.extensive-inapp-list .extensive-inapp-title span { color: #37A1FF; }
+.extensive-inapp-item .inapp-item-play { position: absolute; width: 57px; height: 50px; right: -10px; top: 0; background: url(/images/icon24.png) 14px 11px no-repeat; background-size: 28px 28px; border-left: 1px solid #ededed; margin: 5px 0; }
+.play_press { background: url(/images/icon25.png) 14px 11px no-repeat !important; background-size: 28px 28px !important; }
+.extensive-inapp-item .inapp-item-play-bg { background: #eee; }
+.extensive-inapp-item .inapp-item-title { font-size: 16px; height: 20px; max-width: 80%; display: block; }
+.extensive-inapp-item .inapp-music-container .inapp-item-music-c { height: 14px; line-height: 14px; max-width: 50%; white-space: nowrap; }
+.extensive-inapp-item .inapp-item-main { border: 0; }
+.extensive-inapp-item .inapp-music-container .inappsource-from { position: absolute; right: 5px; bottom: 2px; display: inline-block; height: initial; line-height: initial; margin-top: 7px; padding-left: 0; background: 0; background-position: initial; background-repeat: initial; color: #666; }
+.app-list .extensive-inapp-item .inapp-music-container .inapp-item-icon img { width: 48px; height: 48px; }
+.app-list .extensive-inapp-item .inapp-music-container .inapp-item-icon { width: 48px; height: 48px; }
+.app-list .extensive-inapp-item .inapp-container dd { padding-left: 60px; }
+.app-list .extensive-inapp-list .index-item-main { padding: 6px 0 0; }
+.app-list .extensive-inapp-list .nopic-inapp dd { padding-left: 0; }
+.app-list .precise-music-list .item-side { }
+.app-list .extensive-inapp-list .pager { height: 40px; line-height: 40px; text-align: center; background: #f7f7f7; border: 1px solid #e4e4e4; position: relative; color: #666; }
+.app-list .extensive-inapp-list .pager .previcious, .app-list .extensive-inapp-list .pager .next { display: inline-block; width: 27px; height: 22px; position: absolute; top: 7px; border: 1px solid #c6c6c6; text-align: center; }
+.app-list .extensive-inapp-list .pager .previcious { left: 6px; background: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#eee)); }
+.app-list .extensive-inapp-list .pager .next { right: 6px; background: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#eee)); }
+.app-list .extensive-inapp-list .pager .previcious span, .app-list .extensive-inapp-list .pager .next span { display: block; position: absolute; left: 11px; top: 6px; width: 6px; height: 11px; }
+.app-list .extensive-inapp-list .pager .previcious span { background: url(/images/icon26.png) 0 0 no-repeat; background-size: 6px 11px; }
+.app-list .extensive-inapp-list .pager .next span { background: url(/images/icon27.png) 0 0 no-repeat; background-size: 6px 11px; }
+.app-list .extensive-inapp-list .pager .current { color: #1e95ff; }
+.bg_press { background: -webkit-gradient(linear,0 0,0 100%,from(#eee),to(#fff)) !important; }
+.app-list .extensive-inapp-list .pager .disable { opacity: .3; }
+.app-list-recommend .index-item { height: 67px; border: 0; border-top: 1px #d4d5d6 solid; background-color: #fafafa; position: relative; margin: 0; }
+.app-list-recommend .list_from_box { padding-top: 10px; padding-bottom: 10px; }
+.common3 { width: 28%; display: inline-block; padding: 2px 0; line-height: 30px; }
+.common2 { width: 45%; display: inline-block; padding: 2px 0; line-height: 30px; }
+.bigfont { font-size: 20px; }
+.midfont { font-size: 18px; }
+.smallfont { font-size: 16px; }
+.Orange { color: #fe9622; }
+.Green { color: #52aa63; }
+.Blue { color: #478ce2; }
+.headword { padding-left: 8%; }
+.box-search-outer .app-list { background-color: #fff; padding-top: 2px; }
+.box-body { background: #fff; }
+.box-search-outer .list_from_box .item-side { top: 0; }
+.box-search-outer .app-list-recommend .list_from_box .item-side { top: 10px; }
+
+.search-header .btn_close { position: absolute; font-size: 20px; color: #666; top: 0; right: 0; font-family: AppleGothic; width: 40px; height: 40px; text-align: center; line-height: 40px; background: url(/images/btn_close.png) no-repeat 0 0; background-size: 30px 30px; }

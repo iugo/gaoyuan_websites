@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>页面展示 - 联系方式</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="iugo">
+        <link href='http://fonts.lug.ustc.edu.cn/css?family=Open+Sans:400,800,700,600,300' rel='stylesheet' type='text/css'>        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/templatemo_misc.css">
+        <link rel="stylesheet" href="css/templatemo_style.css">
+
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+  <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">你的浏览器 OUT 了! <a href="http://browsehappy.com/">快升级你的浏览器吧</a> 或者直接 <a href="http://www.google.com/chromeframe/?redirect=true">安装酷炫拽的 Google Chrome </a> 然后我们再才是愉快地上网冲浪.</p>
+        <![endif]-->   
+
+        <div class="site-header">
+            <div class="container">
+                <div class="main-header">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-10">
+                            <div class="logo">
+                                <a rel="nofollow" href="#">
+                                    <img src="images/logo.png" alt="这里是 LOGO" title="这里是 LOGO">
+                                </a>
+                            </div> <!-- /.logo -->
+                        </div> <!-- /.col-md-4 -->
+                        <div class="col-md-8 col-sm-6 col-xs-2">
+                            <div class="main-menu">
+                                <ul class="visible-lg visible-md">
+                                    <li><a href="index.html">首页</a></li>
+                                    <li><a href="services.html">企业文化</a></li>
+                                    <li><a href="events.html">精彩活动</a></li>
+                                	<li><a href="about.html">关于我们</a></li>
+                                    <li class="active"><a href="contact.html">联系方式</a></li>
+                                </ul>
+                                <a href="contact.html#" class="toggle-menu visible-sm visible-xs">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </div> <!-- /.main-menu -->
+                        </div> <!-- /.col-md-8 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.main-header -->
+                <div class="row">
+                    <div class="col-md-12 visible-sm visible-xs">
+                        <div class="menu-responsive">
+                            <ul>
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="services.html">企业文化</a></li>
+                                <li><a href="events.html">精彩活动</a></li>
+                                <li><a href="about.html">关于我们</a></li>
+                                <li class="active"><a href="contact.html">联系方式</a></li>
+                            </ul>
+                        </div> <!-- /.menu-responsive -->
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.site-header -->
+
+        <div class="page-top" id="templatemo_contact">
+        </div> <!-- /.page-header -->
+
+        <div class="contact-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-sm-6 map-wrapper">
+                        <h3 class="widget-title">公司地址</h3>
+                        <!-- <div class="map-holder"></div> -->
+
+<style type="text/css">
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+
+
+  <div style="width:653px;height:360px;border:#ccc solid 1px;" id="dituContent"></div>
+
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(112.850319,35.49835);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.disableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_ZOOM});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"掌上乾坤",content:"掌上乾坤位于黄华街山西证券四楼",point:"112.85018|35.498152",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+
+                        <div class="contact-infos">
+                            <ul>
+                                <li>山西省晋城市城区</li>
+                                <li>Tel: 12345678901</li>
+                                <li>Email: <a href="mailto:iugo@clian.net">iugo@clian.net</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="col-md-5 col-sm-6">
+                        <!--<h3 class="widget-title">联系我们</h3>
+                        <div class="contact-form">
+                            <form name="contactform" id="contactform" action="contact.html#" method="post">
+                                <p>
+                                    <input name="name" type="text" id="name" placeholder="您的名字">
+                                </p>
+                                <p>
+                                    <input name="email" type="text" id="email" placeholder="您的 Email"> 
+                                </p>
+                                <p>
+                                    <input name="subject" type="text" id="subject" placeholder="主题"> 
+                                </p>
+                                <p>
+                                    <textarea name="message" id="message" placeholder="信息"></textarea>    
+                                </p>
+                                <input type="submit" class="mainBtn" id="submit" value="发送给我们">
+                            </form>
+                        </div> --> <!-- /.contact-form -->
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="partner-list">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="partner-item">
+                            <img src="images/partners/partner1.png" alt="">
+                        </div> <!-- /.partner-item -->
+                    </div> <!-- /.col-md-2 -->
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="partner-item">
+                            <img src="images/partners/partner2.png" alt="">
+                        </div> <!-- /.partner-item -->
+                    </div> <!-- /.col-md-2 -->
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="partner-item">
+                            <img src="images/partners/partner3.png" alt="">
+                        </div> <!-- /.partner-item -->
+                    </div> <!-- /.col-md-2 -->
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="partner-item">
+                            <img src="images/partners/partner1.png" alt="">
+                        </div> <!-- /.partner-item -->
+                    </div> <!-- /.col-md-2 -->
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="partner-item">
+                            <img src="images/partners/partner2.png" alt="">
+                        </div> <!-- /.partner-item -->
+                    </div> <!-- /.col-md-2 -->
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="partner-item last">
+                            <img src="images/partners/partner3.png" alt="">
+                        </div> <!-- /.partner-item -->
+                    </div> <!-- /.col-md-2 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.partner-list -->
+
+        <script type='text/javascript' src='js/web_foot.js' zone="foot"></script>
+        
+    </body>
+</html>
