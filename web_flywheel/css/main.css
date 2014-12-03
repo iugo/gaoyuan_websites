@@ -10589,20 +10589,23 @@ p {
 	top:-3px
 }
 .top-section {
-	overflow-x:hidden
+	overflow:hidden
 }
+ 
 @media screen and (max-width: 767px) {
 	.top-section {
 	height:500px;
 	text-align:center
 }
-}@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
 	.top-section {
 	height:690px
 }
-}.top-section div {
-	height:100%
 }
+/*.top-section div {
+	height:100%
+} */
 .top-section div.buttons {
 	height:auto;
 	width:100%;
@@ -10634,7 +10637,7 @@ p {
 	color:white
 }
 @media screen and (min-width: 768px) {
-	.top-section .container-fluid:before,.top-section .container-fluid:after {
+/*	.top-section .container-fluid:before,.top-section .container-fluid:after {
 	position:absolute;
 	width:0;
 	height:0;
@@ -10645,14 +10648,16 @@ p {
 	top:0;
 	left:0;
 	border-width:335px 240px 0 0;
-	border-color:#ffffff transparent transparent transparent
+	border-color:#ffffff transparent transparent transparent;
+  z-index: 7;
 }
 .top-section .container-fluid:after {
 	bottom:0;
 	right:0;
 	border-width:0 0 175px 130px;
-	border-color:transparent transparent #ffffff transparent
-}
+	border-color:transparent transparent #ffffff transparent;
+  z-index: 7;
+}*/
 }.top-description {
 	font-weight:300;
 	font-size:24px;
@@ -10671,7 +10676,7 @@ p {
 }
 @media screen and (min-width: 768px) {
 	.carousel-inner .item {
-	height:690px;
+	height:610px;
 	padding-top:60px
 }
 }@media screen and (max-width: 767px) {

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,7 +10,6 @@
     <meta content='app-id=' name='apple-itunes-app'>
     <link href="css/main.css" media="screen" rel="stylesheet" />
     <link rel="canonical" href="">
-    <script src="js/ppx8yus.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
     <script src="js/main.js"></script>
 </head>
@@ -53,10 +51,10 @@
         </section><!--/.nav-collapse -->
     </section>
 </nav>
-
+          <!--
           <div class="top-section">
     <div class="container-fluid">
-        <div class="row bg-carousel">
+    <div class="row bg-carousel"> 
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
@@ -125,17 +123,44 @@
                         </div>
                     </div>
                 </div>
+            </div>           
             </div>
-        </div>
     </div>
 </div>
+  -->
+
+
+    <link rel="stylesheet" href="nivo-slider/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo-slider/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo-slider/demo/style.css" type="text/css" media="screen" />
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="nivo-slider/demo/images/toystory.jpg" data-thumb="images/toystory.jpg" alt="" />
+                <a href="#"><img src="nivo-slider/demo/images/up.jpg" data-thumb="images/up.jpg" alt="" title="This is an example of a caption" /></a>
+                <img src="nivo-slider/demo/images/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="slideInLeft" />
+                <img src="nivo-slider/demo/images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" />
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+            </div>
+        </div>
+    <script type="text/javascript" src="nivo-slider/demo/scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="nivo-slider/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+
+
+
           <div class="no-cash-section">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12 centered">
                 <div>
-                    <h2 class="highlighted">We keep it professional</h2>
-                    <p>Flywheel customers can feel safe knowing that all of our drivers are licensed professionals.</p>
+                    <h2 class="highlighted">特性一</h2>
+                    <p>具体介绍.</p>
                 </div>
 
             </div>
@@ -150,8 +175,8 @@
         <div class="row">
             <div class="col-md-4 col-md-push-7 col-sm-4 col-sm-push-7 col-xs-12 centered feature-text">
                 <div>
-                    <h2 class="highlighted">Fares that are always fair</h2>
-                    <p>Say no to surge pricing. You can count on Flywheel for the same low rate every hour, every day.</p>
+                    <h2 class="highlighted">特性二</h2>
+                    <p>具体介绍.</p>
                 </div>
             </div>
             <div class="col-md-7 col-md-pull-4 col-sm-7 col-sm-pull-4 col-xs-12 feature-bg">
@@ -165,9 +190,8 @@
         <div class="row">
             <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12 centered">
                 <div>
-                    <h2 class="highlighted">We're on our way</h2>
-                    <p>Never wonder where your taxi is again. Flywheel shows you exactly where your cab is and how long
-                    before it picks you up.</p>
+                    <h2 class="highlighted">特性三</h2>
+                    <p>具体介绍.</p>
                 </div>
 
             </div>
@@ -286,7 +310,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/flywheelnow">
+                        <a href="https://twitter.com/iugo">
                             <figure><img alt="" src="img/icon/icon-twitter-181769f15502d0b018d5f88ee6348c11.png" /></figure>
                             Twitter
                         </a>
@@ -301,6 +325,7 @@
 </footer>
 
       </div>
-
+<!-- 坑的, 首页的主要内容 -- 图片信息, 竟然写在 CSS 中.
+     应该 -->
   </body>
 </html>

@@ -1,0 +1,62 @@
+/*=================================*/
+/* Nivo Slider Demo
+/* November 2010
+/* By: Gilbert Pellegrom
+/* http://dev7studios.com
+/*=================================*/
+
+/*====================*/
+/*=== Reset Styles ===*/
+/*====================*/
+
+.slider-wrapper table {
+	border-collapse:separate;
+	border-spacing:0;
+}
+
+/*===================*/
+/*=== Main Styles ===*/
+/*===================*/
+.slider-wrapper {
+	color:#333;
+	background:#eee;
+  margin: 0;
+}
+
+.slider-wrapper a,
+.slider-wrapper a:visited {
+	color:blue;
+	text-decoration:none;
+}
+.slider-wrapper a:hover,
+.slider-wrapper a:active {
+	color:#000;
+	text-decoration:none;
+}
+@media screen and (min-width: 768px) {
+.slider-wrapper:before,.slider-wrapper:after {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+  content:" ";
+	display:table;
+	position:absolute;
+	width:0;
+	height:0;
+	border-style:solid;
+  z-index: 7;
+}
+.slider-wrapper:before {
+	top:0;
+	left:0;
+	border-width:335px 240px 0 0;
+	border-color:#ffffff transparent transparent transparent;
+}
+.slider-wrapper:after {
+	bottom:0;
+	right:0;
+	border-width:0 0 175px 130px;
+	border-color:transparent transparent #ffffff transparent;
+  display: none;
+}
+}
