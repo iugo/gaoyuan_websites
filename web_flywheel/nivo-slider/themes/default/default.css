@@ -91,3 +91,8 @@ Supports Thumbs: true
 	width: 120px;
 	height: auto;
 }
+@media (max-width: 767px) {
+	.nivo-controlNav {
+	display:none !important
+}
+}

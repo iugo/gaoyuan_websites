@@ -5190,6 +5190,14 @@ th.visible-lg,td.visible-lg {
 	.hidden-lg {
 	display:none !important
 }
+}@media (max-width: 767px) {
+	.mobile-display-none,
+	nivo-controlNav {
+	display:none !important
+}
+	.mobile-apps-section {
+		margin: 0 !important;
+	}
 }.visible-print {
 	display:none !important
 }
@@ -10686,6 +10694,7 @@ p {
 }.carousel-inner .item div {
 	z-index:2
 }
+/*
 .carousel-inner .item:nth-child(1) {
 	background-image:url(../img/image-hero-1-14a980449f9b7b54e191720364279e68.jpg)
 }
@@ -10695,6 +10704,7 @@ p {
 .carousel-inner .item:nth-child(3) {
 	background-image:url(../img/image-hero-2-b73d638f6200db1ce90cc71e37098835.jpg)
 }
+*/
 .no-cash-section .container-fluid>.row {
 	height:450px
 }
@@ -10703,7 +10713,7 @@ p {
 	height:auto
 }
 }.no-cash-section .container-fluid>.row .feature-bg {
-	background-image:url(../img/image-features-1-2870ffb1b53dd7a9dc166ec4db96cf9d.jpg)
+	background-image:url(../img/image-features-1.jpg)
 }
 @media screen and (max-width: 767px) {
 	.no-cash-section .container-fluid>.row .feature-bg {
@@ -10747,7 +10757,7 @@ p {
 	height:auto
 }
 }.on-way-section .container-fluid>.row .feature-bg {
-	background-image:url(../img/image-features-2-909577b51cbb049dbafbb6b98d18d8e6.jpg)
+	background-image:url(../img/image-features-2.jpg)
 }
 @media screen and (max-width: 767px) {
 	.on-way-section .container-fluid>.row .feature-bg {
@@ -10765,7 +10775,7 @@ p {
 	height:auto
 }
 }.fares-fair-section .container-fluid>.row .feature-bg {
-	background-image:url(../img/image-features-3-aba147c897c4ade57215dd57236bcc80.jpg)
+	background-image:url(../img/image-features-3.jpg)
 }
 @media screen and (max-width: 767px) {
 	.fares-fair-section .container-fluid>.row .feature-bg {
