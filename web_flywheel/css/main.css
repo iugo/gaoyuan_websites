@@ -10523,8 +10523,7 @@ p {
 }
 @media screen and (max-width: 767px) {
 	.navbar-brand img {
-	width:125px;
-	padding:12px 0
+	width:85px;
 }
 }.navbar-default .navbar-toggle {
 	border-radius:0;
@@ -10911,7 +10910,10 @@ footer {
 	display:inline-block
 }
 .footer-links ul li a.footer-logo {
-	margin:0
+	margin:0;
+}
+.footer-logo img{
+	width: 2.5em;
 }
 .copyright {
 	margin-top:25px;
