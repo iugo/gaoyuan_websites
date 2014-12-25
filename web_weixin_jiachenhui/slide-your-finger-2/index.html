@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flip Test</title>
+
+  <!-- Flip CSS -->
+  <link rel="stylesheet" href="http://lib.sinaapp.com/js/jquery-mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+
+  <!-- load qunit CSS -->
+  <link rel="stylesheet" href="../libs/qunit/qunit-1.10.0.css" />
+
+  <!-- load flip lib CSS -->
+  <link rel="stylesheet" href="jquery.mobile.flip.min.css" />
+
+  <!-- 全窗口 CSS -->
+  <style type="text/css">
+  *{margin:0;padding:0;}
+  #bg{
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:-999;
+  }
+  </style>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+</html>
+<body>
+<div>
+  <div id="flipRoot" data-role="flip">
+    <div id="bg1">
+      <img src="img/lz.jpg" alt="HIGH"></div>
+    <div id="bg2">
+      <img src="img/lyf.jpg" alt="HIGH"></div>
+    <div id="bg3">
+      <img src="img/end.jpg" alt="HIGH"></div>
+  </div>
+</div>
+
+<!-- 全窗口 JS -->
+<script type="text/javascript">
+  window.onresize = window.onload = function(){
+        var w, h
+        if(!!(window.attachEvent && !window.opera))
+        {
+          h = document.documentElement.clientHeight;
+          w = document.documentElement.clientWidth;
+        }else{
+          h = window.innerHeight;
+          w = window.innerWidth;
+        }
+        var bgImg1 = document.getElementById('bg1').getElementsByTagName('img')[0];
+        bgImg1.width = (w);
+        bgImg1.height= (h);
+        var bgImg2 = document.getElementById('bg2').getElementsByTagName('img')[0];
+        bgImg2.width = (w);
+        bgImg2.height= (h);
+        var bgImg3 = document.getElementById('bg3').getElementsByTagName('img')[0];
+        bgImg3.width = (w);
+        bgImg3.height= (h);
+      }
+  </script>
+
+<!-- Flip JS -->
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery-mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+<!-- load qunit JS -->
+<script type="text/javascript" src="../libs/qunit/qunit-1.10.0.js"></script>
+
+<!-- load flip lib JS -->
+<script type="text/javascript" src="jquery.mobile.flip.min.js"></script>
+</body>
+</html>
