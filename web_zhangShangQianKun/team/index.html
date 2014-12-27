@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>掌上乾坤小伙伴</title>
+
+  <!-- Flip CSS -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+
+  <!-- load qunit CSS -->
+  <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.10.0.css" />
+
+  <!-- load flip lib CSS -->
+  <link rel="stylesheet" href="jquery.mobile.flip.min.css" />
+
+  <!-- 全窗口 CSS -->
+  <style type="text/css">
+  *{margin:0;padding:0;}
+  #bg{
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:-999;
+  }
+  </style>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+</html>
+<body>
+<div>
+  <div id="flipRoot" data-role="flip">
+    <div id="bg1">
+      <img src="img/qw.jpg" alt="HIGH"></div>
+    <div id="bg2">
+      <img src="img/yky.jpg" alt="HIGH"></div>
+    <div id="bg3">
+      <img src="img/lyf.jpg" alt="HIGH"></div>
+	  <div id="bg4">
+      <img src="img/cpf.jpg" alt="HIGH"></div>
+    <div id="bg5">
+      <img src="img/sss.jpg" alt="HIGH"></div>
+    <div id="bg6">
+      <img src="img/qy.jpg" alt="HIGH"></div>
+	  <div id="bg7">
+      <img src="img/jch.jpg" alt="HIGH"></div>
+    <div id="bg8">
+      <img src="img/gmn.jpg" alt="HIGH"></div>
+    <div id="bg9">
+      <img src="img/chq.jpg" alt="HIGH"></div>
+	  <div id="bg10">
+      <img src="img/zjy.jpg" alt="HIGH"></div>
+    <div id="bg11">
+      <img src="img/zmf.jpg" alt="HIGH"></div>
+    <div id="bg12">
+      <img src="img/lzr.jpg" alt="HIGH"></div>
+  </div>
+</div>
+
+<!-- 全窗口 JS -->
+<script type="text/javascript">
+  window.onresize = window.onload = function(){
+        var w, h
+        if(!!(window.attachEvent && !window.opera))
+        {
+          h = document.documentElement.clientHeight;
+          w = document.documentElement.clientWidth;
+        }else{
+          h = window.innerHeight;
+          w = window.innerWidth;
+        }
+        var bgImg1 = document.getElementById('bg1').getElementsByTagName('img')[0];
+        bgImg1.width = (w);
+        bgImg1.height= (h);
+        var bgImg2 = document.getElementById('bg2').getElementsByTagName('img')[0];
+        bgImg2.width = (w);
+        bgImg2.height= (h);
+        var bgImg3 = document.getElementById('bg3').getElementsByTagName('img')[0];
+        bgImg3.width = (w);
+        bgImg3.height= (h);
+        var bgImg1 = document.getElementById('bg4').getElementsByTagName('img')[0];
+        bgImg1.width = (w);
+        bgImg1.height= (h);
+        var bgImg2 = document.getElementById('bg5').getElementsByTagName('img')[0];
+        bgImg2.width = (w);
+        bgImg2.height= (h);
+        var bgImg3 = document.getElementById('bg6').getElementsByTagName('img')[0];
+        bgImg3.width = (w);
+        bgImg3.height= (h);
+		var bgImg1 = document.getElementById('bg7').getElementsByTagName('img')[0];
+        bgImg1.width = (w);
+        bgImg1.height= (h);
+        var bgImg2 = document.getElementById('bg8').getElementsByTagName('img')[0];
+        bgImg2.width = (w);
+        bgImg2.height= (h);
+        var bgImg1 = document.getElementById('bg9').getElementsByTagName('img')[0];
+        bgImg1.width = (w);
+        bgImg1.height= (h);
+        var bgImg2 = document.getElementById('bg10').getElementsByTagName('img')[0];
+        bgImg2.width = (w);
+        bgImg2.height= (h);
+        var bgImg3 = document.getElementById('bg11').getElementsByTagName('img')[0];
+        bgImg3.width = (w);
+        bgImg3.height= (h);
+        var bgImg3 = document.getElementById('bg12').getElementsByTagName('img')[0];
+        bgImg3.width = (w);
+        bgImg3.height= (h);
+      }
+  </script>
+
+<!-- Flip JS -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+<!-- load qunit JS -->
+<script type="text/javascript" src="http://code.jquery.com/qunit/qunit-1.10.0.js"></script>
+
+<!-- load flip lib JS -->
+<script type="text/javascript" src="jquery.mobile.flip.min.js"></script>
+
+</body>
+</html>

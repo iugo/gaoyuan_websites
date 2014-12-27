@@ -1,0 +1,121 @@
+footer {
+	width:100%;
+	height:200px;
+	color:#8B98AB;
+	text-align: left;
+	background-color:#3A4149;
+}
+.ft-ct {
+	width:970px;
+	margin:0 auto;
+	padding:30px 5px 0 5px;
+	line-height:24px;
+	overflow:hidden;
+}
+.lk1 {
+	float:right;
+	margin-top: 20px;
+}
+.lk1 p {
+	color:#8B98AB;
+	font-size:12px;
+}
+.lk1 a {
+	color:#8B98AB;
+	margin-right:10px;
+}
+.lk1 a:hover {
+	color:#BED0EB;
+}
+.lk1 em {
+	color:#8B98AB;
+	margin-right:10px;
+	vertical-align:middle;
+}
+.ct-link {
+	float:left;
+}
+.ct-right {
+	float:right;
+	margin-left:20px;
+}
+.code {
+	margin:10px 0;
+	vertical-align:text-bottom;
+	overflow:hidden;
+}
+.code p {
+	font-size:12px;
+}
+.code img {
+	float:left;
+	vertical-align:middle;
+}
+.wlink {
+	/*padding:10px 0;*/
+	/*padding-bottom: 40px;*/
+	margin-bottom: 10px;
+	height:38px;
+}
+.wlink a {
+	margin-right:10px;
+	-webkit-transition:-webkit-transform 0.4s ease-out;
+	-moz-transition:-moz-transform 0.4s ease-out;
+	transition:transform 0.4s ease-out;
+}
+.wlink a:hover {
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	transform:rotate(360deg);
+}
+.lk-ico {
+	width:38px;
+	height:38px;
+	line-height:1000px;
+	display:inline-block;
+}
+.qqico {
+	background-image:url(../images/wico.png);
+	background-repeat:no-repeat;
+	background-position:1px 1px;
+}
+.weibo {
+	background-image:url(../images/wico.png);
+	background-repeat:no-repeat;
+	background-position:1px -36px;
+}
+.wangwang {
+	background-image:url(../images/wico.png);
+	background-repeat:no-repeat;
+	background-position:1px -73px;
+}
+.tico {
+	margin-right:6px;
+	vertical-align:middle;
+	display:inline-block;
+}
+.qq {
+	width:27px;
+	height:23px;
+	background-image:url(../images/qq.png);
+	background-position:1px 1px;
+	background-repeat:no-repeat;
+}
+.weixin {
+	width:27px;
+	height:23px;
+	background-image:url(../images/weixin.jpg);
+}
+.tel {
+	width:27px;
+	height:23px;
+	background-image:url(../images/tel.png);
+	background-position:1px 1px;
+	background-repeat:no-repeat;
+}
+.p-style{
+	font-family:"楷体";
+	font-style: italic;
+	font-size: 33px;
+	margin-bottom: 13px;
+}
