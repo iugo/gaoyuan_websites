@@ -10909,3 +10909,26 @@ footer {
 .copyright a {
 	color:#b7b8ba
 }
+.mobile_app_download{
+    width: 80%;
+    margin: auto;
+    padding: 2em;
+}
+.mobile_app_download .left{
+    width: 45%;
+    height: 100%;
+    float: left;
+}
+.mobile_app_download .left > img{
+    width:200px;
+    float: right;
+}
+.mobile_app_download .right{
+    width: 45%;
+    height: 50%;
+    float: right;
+    clear: right;
+}
+.mobile_app_download .right > img{
+    margin: 29px 0 0 18px;
+}
