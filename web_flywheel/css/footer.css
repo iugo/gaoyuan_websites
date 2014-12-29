@@ -155,12 +155,13 @@
 .site-footer .copyright .sns-info>a:last-child {
     margin-right: 0
 }
+/*
 .site-footer .copyright .sns-info>a.sina-info {
     background-position: 0 -26px
 }
 .site-footer .copyright .sns-info>a.sina-info:hover {
     background-position: 0 0
-}
+}*/
 .site-footer .copyright .sns-info>a.qq-info {
     position: relative;
     background-position: -26px -26px
@@ -209,6 +210,9 @@
     margin-top: 5px;
     margin-bottom: 10px
 }
+
+
+
 .site-footer .copyright .sns-info>a.weixin-info {
     position: relative;
     background-position: -52px -26px
@@ -263,12 +267,69 @@
     background-image: url(../img/qr-weixin.jpg);
     background-size: 120px 120px
 }
+
+
+.site-footer .copyright .sns-info>a.ali-info {
+    position: relative;
+    background-position: -78px -26px
+}
+.site-footer .copyright .sns-info>a.ali-info:before {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    width: 38px;
+    height: 38px;
+    content: ""
+}
+.site-footer .copyright .sns-info>a.ali-info:hover {
+    background-position: -78px 0
+}
+.site-footer .copyright .sns-info>a.ali-info:hover .pop {
+    display: block
+}
+.site-footer .copyright .sns-info>a.ali-info .pop {
+    display: none;
+    position: absolute;
+    top: -215px;
+    left: -63px;
+    width: 150px;
+    height: 205px;
+    padding: 20px 10px;
+    border: 1px solid #d5d8dd;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .15)
+}
+.site-footer .copyright .sns-info>a.ali-info .pop:after {
+    position: absolute;
+    left: 68px;
+    bottom: -13px;
+    border: 7px solid transparent;
+    border-top: 7px solid #fff;
+    content: ""
+}
+.site-footer .copyright .sns-info>a.ali-info .pop label {
+    color: gray;
+    margin-bottom: 0
+}
+.site-footer .copyright .sns-info>a.ali-info .pop p {
+    color: #a6a6a6;
+    margin-bottom: 10px
+}
+.site-footer .copyright .sns-info>a.ali-info .pop .qr-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    background-image: url(../img/qr-ali.png);
+    background-size: 120px 120px
+}
+/*
 .site-footer .copyright .sns-info>a.douban-info {
     background-position: -78px -26px
 }
 .site-footer .copyright .sns-info>a.douban-info:hover {
     background-position: -78px 0
-}
+}*/
 @media (max-width: 767px) {
     .site-footer .other-products .text {
         padding-top: 10px
