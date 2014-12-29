@@ -35,8 +35,8 @@
 }
 .site-footer .footer-nav .other-products .product-logo {
     float: left;
-    background-image: url(../images/icons@2x.png);
-    background-size: 120px 40px;
+    background-image: url(../img/icons2x.png);
+    background-size: 80px 40px;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     width: 40px;
@@ -49,10 +49,10 @@
     background-position: 0 0
 }
 .site-footer .footer-nav .other-products .product-logo.today {
-    background-position: -40px 0
+    background-position: 0 0
 }
 .site-footer .footer-nav .other-products .product-logo.talk {
-    background-position: -80px 0
+    background-position: -40px 0
 }
 .site-footer .footer-nav .other-products .text {
     padding-left: 50px;
