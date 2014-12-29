@@ -339,7 +339,7 @@
     }
 }
 /* 在 480 的时候才做切换, 是不是太小了? 我觉得 720 就可以切了. */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .site-footer .footer-nav {
         padding: 15px 0 20px
     }
@@ -374,7 +374,7 @@
     }
     .site-footer .footer-nav .nav-group:last-child>li {
         display: inline-block;
-        margin: 0 25px;
+        margin: 0 5px;
         transform: scale(0.8);
         -webkit-transform: scale(0.8)
     }
