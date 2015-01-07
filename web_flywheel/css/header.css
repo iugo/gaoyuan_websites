@@ -1,0 +1,250 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    min-height: 70px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    opacity: .95;
+}
+
+.site-header .navbar {
+    margin-bottom: 0;
+    padding: 7px 0;
+}
+
+.site-header .navbar .navbar-toggle {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.site-header .navbar .navbar-toggle .icon-bar {
+    background-color: #666;
+}
+
+.site-header .navbar-collapse {
+    padding-right: 0;
+}
+
+/* LOGO 图片地址修改处 */
+.site-header .navbar-brand {
+    width: 202px;
+    text-indent: -9999px;
+    background-image: url(../images/logo.png);
+    background-size: auto 46px;
+    background-repeat: no-repeat;
+    background-position: left 3px;
+}
+
+.site-header .business-nav a {
+    display: inline-block;
+}
+
+.site-header .business-nav .discount-christmas {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+}
+
+.site-header .business-nav .discount-label {
+    position: relative;
+    top: -3px;
+    left: -5px;
+    display: inline-block;
+    height: 21px;
+    padding: 1px 5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background: #e51c23;
+    font-size: 12px;
+    color: #fff;
+}
+
+.site-header .business-nav .discount-label:hover {
+    opacity: .8;
+    filter: alpha(opacity=80);
+}
+
+.site-header .business-nav .discount-label:before {
+    content: " ";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    margin-top: -5px;
+    border: 5px solid transparent;
+    border-right: 5px solid #e51c23;
+}
+
+@media (max-width:767px) {
+    .site-header .business-nav {
+        background-color: #f8f8f8;
+    }
+}
+
+.site-header .navbar-nav>li>a {
+    color: #383838;
+    font-size: 16px;
+    margin-left: 25px;
+}
+
+.site-header .navbar-nav>li>a:focus,.site-header .navbar-nav>li>a:hover {
+    color: #03a9f4;
+    background-color: transparent;
+}
+
+.site-header .navbar-nav>li.active>a {
+    color: #03a9f4;
+}
+
+.site-header .navbar-button {
+    margin: 0;
+    text-align: right;
+}
+
+.site-header .navbar-button>li {
+    margin: 0;
+    padding: 0;
+}
+
+.site-header .navbar-button>li a.return-projects,.site-header .navbar-button>li a.user {
+    padding: 15px;
+    line-height: 20px;
+    border: none;
+    color: #383838;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.site-header .navbar-button>li a.return-projects:hover,.site-header .navbar-button>li a.user:hover {
+    color: #03a9f4;
+}
+
+.site-header .navbar-button>li a.btn {
+    margin: 8px 0 8px 20px;
+}
+
+.site-header .navbar-button>li .dropdown-menu {
+    left: -20px;
+    min-width: 200px;
+    max-height: 400px;
+    margin-top: 10px;
+    padding: 0;
+    overflow-y: auto;
+    text-align: left;
+    border: none;
+    -webkit-box-shadow: 0 7px 21px rgba(0,0,0,.1);
+    box-shadow: 0 7px 21px rgba(0,0,0,.1);
+}
+
+.site-header .navbar-button>li .dropdown-menu a {
+    padding: 15px;
+    line-height: 20px;
+    color: #383838;
+}
+
+.site-header .navbar-button>li>a.user {
+    display: block;
+    position: relative;
+}
+
+.site-header .navbar-button>li>a.user .avatar {
+    position: absolute;
+    top: 13px;
+    left: -20px;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.site-header .navbar-button>li>a.login,.site-header .navbar-button>li>a.signup {
+    width: 80px;
+}
+
+@media (max-width:1199px) {
+    .site-header .navbar-nav>li>a {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width:991px) {
+    .site-header .navbar-button>li {
+        margin-left: 10px;
+    }
+
+    .site-header .navbar-button>li:first-child {
+        margin-left: 0;
+    }
+
+    .site-header .navbar-button>li a.btn {
+        width: 60px;
+        margin-left: 3px;
+    }
+
+    .site-header .navbar-button>li a.return-projects {
+        display: none;
+    }
+
+    .site-header .navbar-button>li a.user .user-name {
+        max-width: 95px;
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width:840px) {
+    .site-header .navbar-nav>li>a {
+        margin-left: 3px;
+    }
+}
+
+@media (max-width:767px) {
+    .site-header .navbar-nav>li.active>a {
+        background-color: #f8f8f8;
+        border-radius: 4px;
+    }
+
+    .site-header .navbar-button {
+        display: none;
+    }
+}
+
+
+
+.en .site-header .discount-label {
+    top: -2px;
+    left: -7px;
+}
+
+@media (max-width:1210px) {
+    .en .site-header .navbar-nav>li>a {
+        padding: 15px 10px;
+    }
+}
+
+@media (max-width:991px) {
+    .en .site-header .navbar-nav>li>a {
+        padding: 15px 6px;
+    }
+
+    .en .site-header .navbar-button>li {
+        margin-left: 5px;
+    }
+
+    .en .site-header .navbar-button>li a.btn {
+        width: 80px;
+        margin-left: 3px;
+    }
+}
+
+@media (max-width:870px) {
+    .en .site-header .navbar-button>li a.signup {
+        display: none;
+    }
+}
