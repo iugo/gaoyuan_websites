@@ -2081,25 +2081,20 @@ body.open-modal .modal-window {
 .info-jumbotron .subcol-nav li {
     width: 20%!important;
 }
-
-.info-news-jumbotron,.info-news-jumbotron .subcol-nav-bg {
-    background-image: url(../images/info-news-jumbotron-bg.jpg);
+.product-summary,.product-summary .subcol-nav-bg {
+    background-image: url(https://dn-site.oss.aliyuncs.com/v0.2.x/images/info-news-jumbotron-bg.jpg);
 }
-
-.info-member-jumbotron,.info-member-jumbotron .subcol-nav-bg,.info-team-jumbotron,.info-team-jumbotron .subcol-nav-bg {
-    background-image: url(../images/info-team-jumbotron-bg.jpg);
+.product-enter,.product-enter .subcol-nav-bg {
+    background-image: url(https://dn-site.oss.aliyuncs.com/v0.2.x/images/info-news-jumbotron-bg.jpg);
 }
-
-.info-jobs-jumbotron,.info-jobs-jumbotron .subcol-nav-bg {
-    background-image: url(../images/info-jobs-jumbotron-bg.jpg);
+.product-support,.product-support .subcol-nav-bg {
+    background-image: url(https://dn-site.oss.aliyuncs.com/v0.2.x/images/info-news-jumbotron-bg.jpg);
 }
-
-.info-press-jumbotron,.info-press-jumbotron .subcol-nav-bg {
-    background-image: url(../images/info-press-jumbotron-bg.jpg);
+.product-legal,.product-legal .subcol-nav-bg {
+    background-image: url(https://dn-site.oss.aliyuncs.com/v0.2.x/images/info-news-jumbotron-bg.jpg);
 }
-
-.info-partners-jumbotron,.info-partners-jumbotron .subcol-nav-bg {
-    background-image: url(../images/info-partners-jumbotron-bg.jpg);
+.product-privacy,.product-privacy .subcol-nav-bg {
+    background-image: url(https://dn-site.oss.aliyuncs.com/v0.2.x/images/info-news-jumbotron-bg.jpg);
 }
 
 .fontsz {
@@ -5327,4 +5322,8 @@ select {
     .readable h2 {
         font-size: 1.4em;
     }
+}
+
+.site-content .content .indent2 p {
+    text-indent: 2em;
 }
