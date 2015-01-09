@@ -36,7 +36,6 @@
   </div>
 </div>
 
-
 <div class="site-content">
 <div class="container content max1010 hack-webkit-render">
   <style>
@@ -58,6 +57,8 @@
       background-position: top;
       background-size: 250px;
       font-size: 1.1em;
+      word-wrap: break-word; 
+      word-break: normal;
     }
     .step1{
       background-image: url(../img/step-001.png);
@@ -87,6 +88,17 @@
       background-size: 120px;
       background-position: center;
       background-repeat: no-repeat;
+    }
+    @media (max-width:500px) {
+      .step{
+        min-width: 125px;
+        margin-right: 16px;
+        height: 400px;
+      }
+      .arrow{
+        right: -36px;
+        background-size: 60px;
+      }
     }
   </style>
   <div class="step step1">
