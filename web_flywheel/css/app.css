@@ -2081,6 +2081,9 @@ body.open-modal .modal-window {
 .info-jumbotron .subcol-nav li {
     width: 20%!important;
 }
+.product .site-content{
+    margin-bottom: 40px;
+}
 .product-summary,.product-summary .subcol-nav-bg {
     background-image: url(https://dn-site.oss.aliyuncs.com/v0.2.x/images/info-news-jumbotron-bg.jpg);
 }
@@ -2095,6 +2098,11 @@ body.open-modal .modal-window {
 }
 .product-privacy,.product-privacy .subcol-nav-bg {
     background-image: url(https://dn-site.oss.aliyuncs.com/v0.2.x/images/info-news-jumbotron-bg.jpg);
+}
+@media (max-width:768px) {
+    .product .site-content{
+        margin-bottom: 15px;
+    }
 }
 
 .fontsz {
