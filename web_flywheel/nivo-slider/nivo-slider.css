@@ -111,6 +111,11 @@
 .nivo-controlNav a.active {
 	font-weight:bold;
 }
+@media (max-width: 767px) {
+	nivo-controlNav {
+	display:none !important
+}
+}
 
 /*=================================*/
 /* Nivo Slider Demo
