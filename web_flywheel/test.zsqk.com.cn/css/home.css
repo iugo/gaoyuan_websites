@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0
+}
+body {
+    font: 13px/1.5 "Microsoft YaHei", arial, sans-serif;
+    background-color: #fff;
+    font-size: 12px\9
+}
+a {
+    text-decoration: none;
+    outline: 0
+}
+a:HOVER {
+    text-decoration: underline
+}
+a:FOCUS {
+    outline: 0;
+    -moz-outline-width: 0
+}
+a img {
+    border: 0
+}
+ul {
+    padding: 0;
+    margin: 0
+}
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+img {
+    vertical-align: bottom
+}
+.w960 {
+    width: 960px
+}
+.marM {
+    margin: 0 auto
+}
+.tac {
+    text-align: center
+}
+.tar {
+    text-align: right
+}
+.tal {
+    text-align: left
+}
+.pl10 {
+    padding-left: 10px
+}
+.pr10 {
+    padding-right: 10px
+}
+.none {
+    display: none
+}
+.pr {
+    position: relative
+}
+.header-wrapper {
+    background: #fff
+}
+.header-brand {
+    height: 60px;
+    position: relative
+}
+.koudai-logo {
+    display: block;
+    position: absolute;
+    top: 8px;
+    width: 190px;
+    background: url(/img/logo.png) no-repeat;
+    background-size: 290px;
+    text-indent: -999px
+}
+.login-login {
+    background: url(../images/sell_home_btn_icons.png?v=0108161219.3.0.1) no-repeat;
+    _background-image: url(../images/sell_home_btn_icons_8.png?v=0108161219.3.0.1)
+}
+.header-title, .home-l-item-icon, .home-l-item-name p, .free-coming, .all-platform, .header-c-icon, .header-c-tao, .logined-actions .logined-go {
+    background: url(../images/sell_home_icons_24.png?v=0108161219.2.0.1) no-repeat;
+    _background-image: url(../images/sell_home_icons_8.png?v=0108161219.2.0.1)
+}
+.header-middle {
+    background-image: url('../images/h_header_middle.png');
+}
+.header-middle-banner {
+    background: url('../images/homepage_banner.png') center center no-repeat;
+    display: block;
+    cursor: pointer
+}
+.header-content {
+    height: 231px;
+    position: relative;
+    padding-top: 50px;
+    position: relative
+}
+.header-content a {
+    position: absolute;
+    right: 11px;
+    top: 166px;
+    width: 294px;
+    height: 30px
+}
+.free-coming, .all-platform {
+    display: block;
+    position: absolute;
+    text-indent: -9999px
+}
+.all-platform {
+    top: 110px;
+    left: 390px;
+    width: 110px;
+    height: 120px;
+    background-position: -510px 0
+}
+.header-construct {
+    width: 313px;
+    height: 150px;
+    position: absolute;
+    top: 60px;
+    right: 4px
+}
+.header-c-bg {
+    display: block;
+    width: 310px;
+    height: 108px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/black_opacity_bg_24.png?v=0108161219.2.0.1) no-repeat;
+    _background: #000;
+    *z-index: -1;
+    _filter: alpha(opacity=25)
+}
+.header-c-phone {
+    padding-left: 130px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    width: 150px;
+    color: #fff;
+    font-weight: normal;
+    height: 60px;
+    z-index: 10;
+    opacity: .99;
+    position: relative
+}
+.header-c-sperate {
+    display: block;
+    width: 0;
+    background: #aaa;
+    height: 55px;
+    position: absolute;
+    top: 22px;
+    left: 112px;
+    font-size: 0;
+    border-left: 1px solid #999;
+    border-right: 1px solid #bbb
+}
+.header-c-icon {
+    background-position: -480px -270px;
+    display: block;
+    width: 62px;
+    height: 80px;
+    position: absolute;
+    top: 15px;
+    left: 30px
+}
+.header-c-tao {
+    background-position: -1px 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #666;
+    text-align: center
+}
+.header-c-tao a {
+    height: 50px;
+    line-height: 50px;
+    text-indent: -9999px;
+    color: #666;
+    display: block
+}
+.main {
+    background: #f8f8f8
+}
+.main-body-wrapper {
+    position: relative;
+    height: 680px;
+	margin-bottom: -50px;
+}
+.home-left {
+    width: 600px
+}
+.home-left-title {
+    padding: 0;
+    color: #757575;
+    font-size: 22px;
+    letter-spacing: 2px;
+    padding-left: 25px;
+    width: 505px;
+    height: 83px;
+    line-height: 83px;
+    border-right: 1px dotted #ccc
+}
+.home-left-seperate {
+    height: 20px;
+    width: 75px;
+    border-right: 1px dotted #ccc
+}
+.home-left-item {
+    background: url('../images/home_left_item_bg.png?v=0108161219.2.0.1') no-repeat;
+    padding: 15px 0 15px 20px;
+    width: 580px;
+    height: 95px
+}
+.home-l-item-icon {
+    width: 85px;
+    float: left;
+    display: block;
+    text-indent: -9999px;
+    height: 80px;
+    margin-top: 10px;
+    _margin-top: 5px
+}
+.home-l-item-name {
+    float: left;
+    padding-left: 5px;
+    margin-top: 15px;
+    _margin-top: 10px
+}
+.home-l-item-name p {
+    font-size: 30px;
+    color: #aaa;
+    width: 135px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    text-indent: -9999px
+}
+.home-l-item-name .home-l-i-name-flow {
+    background-position: -270px -180px
+}
+.home-l-item-name .home-l-i-name-convert {
+    background-position: -420px -180px
+}
+.home-l-item-name .home-l-i-name-stick {
+    background-position: -330px -270px
+}
+.home-l-item-detail {
+    float: left;
+    color: #878787;
+    font-size: 18px;
+    width: 302px;
+    padding-left: 20px;
+    padding-top: 10px
+}
+.home-item-flow .home-l-item-icon {
+    background-position: 10px -270px
+}
+.home-item-convert .home-l-item-icon {
+    background-position: -105px -270px
+}
+.home-item-stickness .home-l-item-icon {
+    background-position: -205px -270px
+}
+.home-item-flow p .focus, .home-item-convert p .focus, .home-item-stickness p .focus {
+    color: #ff8330;
+    font-weight: bold
+}
+.home-right {
+    width: 342px;
+    height: 615px;
+    position: absolute;
+    top: -7px;
+    right: 0
+}
+.main-login {
+    list-style: none;
+    margin-top: 144px
+}
+.home-no-header {
+    width: 147px;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer
+}
+.home-login-table input[type=text], .home-login-table input[type=password] {
+    width: 150px;
+    height: 25px
+}
+.home-login-table tbody td {
+    padding-top: 15px
+}
+.login-text {
+    padding-left: 15px;
+    color: #555;
+    *font-size: 12px
+}
+.login-tips {
+    color: #555;
+    width: 274px;
+    margin: 0 auto 0;
+    *font-size: 12px
+}
+.login-dashed {
+    border-top: 1px dashed #ddd;
+    width: 274px;
+    margin: 10px auto 0;
+    height: 18px;
+    overflow: hidden
+}
+.mention {
+    color: #757575;
+    font-size: 14px;
+    width: 293px;
+    line-height: 1.8;
+    margin: 10px auto 0;
+    padding-bottom: 15px
+}
+.mention dt {
+    font-size: 18px;
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 0
+}
+.mention dd dt {
+    font-size: 14px;
+    color: #757575;
+    font-weight: normal;
+    margin-bottom: 0
+}
+.mention dd .third-list dd {
+    padding-left: 10px;
+    color: #777
+}
+.home-seperate {
+    width: 100%;
+    height: 53px;
+    background: url('../images/home_wave_bg.png?v=0108161219.5.0.1') repeat-x
+}
+.home-hot-shops {
+    background: #f3f3f3;
+    padding-bottom: 50px
+}
+.home-footer {
+    background: url('../images/home_footer_bg.png?v=0108161219.5.0.1') repeat-x;
+    height: 146px
+}
+.border {
+    border: 1px solid #c8c8c8
+}
+.login {
+    width: 340px;
+    border-bottom: 1px solid #e3e3e3;
+    background: #fff
+}
+.clear {
+    clear: both
+}
+.login01 {
+    height: 53px;
+    line-height: 53px;
+    text-align: center;
+    font-size: 22px
+}
+.login .selected {
+    background-color: #fff;
+    border-bottom: 0
+}
+.login04.selected {
+    border-top: 4px solid #f3680a
+}
+.login05.selected {
+    border-top: 4px solid #c7232b
+}
+.login02 {
+    padding: 10px 20px;
+    background: #fff
+}
+.login02 .loginTabao input {
+    width: 260px;
+    padding-left: 35px
+}
+.loginInput {
+    border-radius: 3px;
+    height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    outline: 0
+}
+.userName {
+    background: url(../images/login_01.jpg) no-repeat 5px center #fff
+}
+.password {
+    background: url(../images/login_02.jpg) no-repeat 5px center #fff
+}
+.placeholder {
+    color: #a9a9a9
+}
+.login select {
+    width: 218px;
+    text-indent: 3px;
+    font-size: 14px;
+    outline: 0
+}
+.login .phone {
+    margin-left: 0px;
+    text-indent: 15px;
+    width: 217px
+}
+
+.loginButton {
+    color: #fff;
+    background: #d60c00;
+    display: block;
+    line-height: 39px;
+    height: 39px;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 15px;
+    border: 0;
+    width: 300px;
+    margin: auto
+}
+.itembg {
+	height: 620px;
+	background: url(../images/bg.jpg) no-repeat;
+	background-size: 640px;
+	background-position: -25px -15px;
+}

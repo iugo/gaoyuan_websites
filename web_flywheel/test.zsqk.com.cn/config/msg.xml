@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msgs>
+   <msg code="already_login">{0} 您好！您已经登陆啦！</msg>
+   <msg code="user_unexist">对不起，该用户不存在！</msg>
+   <msg code="time_out">5分钟时间还没到！请稍后重试！</msg>
+   <msg code="login_success">登陆成功！欢迎您！ {0}</msg>
+   <msg code="error_arrived">您已经连续10次登陆失败！请5分钟后再试！</msg>
+   <msg code="login_failed">登陆失败！请检查您的用户名和密码！您已经连续登陆失败{0}次了！您还有{1}次登陆机会，连续错误10次后需要在5分钟后再次登陆！</msg>
+   <msg code="user_exist">对不起！该邮箱已经注册过！</msg>
+   <msg code="register_success">{0}您好！您已经注册成功！</msg>
+   <msg code="must_login">您好！请先登录！</msg>
+   <msg code="update_pass_success">密码修改成功！</msg>
+   <msg code="mail_send_failed">邮件发送失败！</msg>
+   <msg code="mail_send_success">邮件已发送！请您到邮箱中点击链接重置密码！</msg>
+   <msg code="link_timeout">链接已经过期！请重新申请重置密码！</msg>
+   <msg code="link_error">链接无效！请重新申请重置密码！</msg>
+</msgs>
