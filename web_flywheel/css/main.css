@@ -4899,9 +4899,6 @@ th.visible-print,td.visible-print {
 body {
 	margin:0
 }
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
-	display:block
-}
 audio,canvas,progress,video {
 	display:inline-block;
 	vertical-align:baseline
@@ -5092,27 +5089,6 @@ select {
 .table-bordered th,.table-bordered td {
 	border:1px solid #ddd !important
 }
-}
-* {
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box
-}
-*:before,*:after {
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box
-}
-html {
-	font-size:10px;
-	-webkit-tap-highlight-color:transparent
-}
-body {
-	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size:14px;
-	line-height:1.42857;
-	color:#333333;
-	background-color:#fff
 }
 input,button,select,textarea {
 	font-family:inherit;
@@ -5471,11 +5447,6 @@ pre code {
 	.container {
 	width:1170px
 }
-}.container-fluid {
-	margin-right:auto;
-	margin-left:auto;
-	padding-left:15px;
-	padding-right:15px
 }
 .container-fluid:before,.container-fluid:after {
 	content:" ";
@@ -7280,11 +7251,7 @@ tbody.collapse.in {
 .navbar-header:after {
 	clear:both
 }
-@media (min-width: 768px) {
-	.navbar-header {
-	float:left
-}
-}.navbar-collapse {
+.navbar-collapse {
 	overflow-x:visible;
 	padding-right:15px;
 	padding-left:15px;
